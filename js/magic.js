@@ -8,7 +8,7 @@
     app.controller('productController',function($http){
 
         scop = this;
-        $http.get('js/array1.json').then(function(res){scop.products = res.data;});
+        $http.get('js/array.json').then(function(res){scop.products = res.data;});
 
 
 
