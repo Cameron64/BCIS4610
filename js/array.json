@@ -1,0 +1,21 @@
+[
+    {
+        "name":"Super Knife",
+        "description":"This knife will mess you up",
+        "pic":"pics/knife.png"
+    },
+
+    {
+        "name":"Ultra Knife",
+        "description":"This knife will mess you up even more",
+        "pic":"pics/Magnum.jpg"
+    },
+
+    {
+        "name":"Kitchen Knife",
+        "description":"This knife cuts tomatoes",
+        "pic":"pics/virtual.png"
+    }
+
+
+]
