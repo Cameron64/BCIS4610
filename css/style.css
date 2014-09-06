@@ -10,6 +10,13 @@ body {
     height: 20%;
     background-color:lightgrey;
 }
+.searchBox{
+    position: absolute;
+    bottom: 0px;
+    margin: 2px;
+    height: 20px;
+    width: 200px;
+}
 .container{
     position: absolute;
     height: 100%;
