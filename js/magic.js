@@ -3,7 +3,7 @@
  */
 (function() {
 
-    var app = angular.module('business', []);
+    var app = angular.module('business', ['ngAnimate']);
 
     app.controller('productController',function($http){
 
