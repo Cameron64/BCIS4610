@@ -6,6 +6,7 @@
     <script src="js/magic.js"></script>
     <script src="js/array.json"></script>
     <script src="http://code.angularjs.org/1.2.5/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-cookies.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title></title>
@@ -23,12 +24,12 @@
             <div class="box">
 
                 <div class="boxInner">
-                    <strong>{{product.name}}</strong>
+                    <strong >{{product.name}}</strong>
                     <p> {{product.description}}</p>
 
 
             <div >
-                <img  ng-src="{{product.pic}}"/>
+                <img ng-click="productCtrl.setValue()" ng-src="{{product.pic}}"/>
             </div>
 
                 </div>
