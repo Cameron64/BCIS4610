@@ -21,19 +21,23 @@
     <article ng-controller="productController as productCtrl" >
 
         <div  ng-repeat="product in productCtrl.products | filter:searchText" class="repeat-animation" >
-            <div class="box">
+            <div class="box" id="{{product.name}}">
 
-                <div class="boxInner">
+
+
+                    <div class="boxInner">
                     <strong >{{product.name}}</strong>
                     <p> {{product.description}}</p>
 
 
-            <div >
-                <img ng-click="productCtrl.setValue()" ng-src="{{product.pic}}"/>
-            </div>
 
-                </div>
+
+                <img ng-click=" productCtrl.select(product.name)" ng-src="{{product.pic}}"/>
+
+
+
             </div>
+                </div>
 
         </div>
     </article>

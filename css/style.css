@@ -35,6 +35,15 @@ body {
     width: 20%;
     padding-bottom: 20%;
 }
+.boxSelected{
+    float: left;
+    position: relative;
+    width: 20%;
+    padding-bottom: 20%;
+    border-style: solid;
+    border-width:3px;
+    border-color: lawngreen;
+}
 .boxInner {
     position: absolute;
     left: 10px;
