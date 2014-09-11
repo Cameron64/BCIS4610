@@ -17,6 +17,11 @@ body {
     height: 20px;
     width: 200px;
 }
+.btn-sm{
+    position:absolute;
+    right:0;
+    bottom:0;
+}
 .container{
     position: absolute;
     height: 100%;
