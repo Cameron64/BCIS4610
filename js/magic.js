@@ -22,12 +22,29 @@
             else {
                 // else, dissect the cookie and add contents into basket
                 console.log("dissecting cookie");
+                //this line turns the cookie into an array
                 this.basket = this.getCookie().split(",");
                 console.log("printing basket");
                 console.log(this.basket);
 
 
+                //corbin, these lines
+               /* var j = [];
+                 j = getCookie().split(",");*/
 
+                //this gets the cookie contents and returns them
+                /*this.getCookie = function() {
+                 var name = "rollingSharpener" + "=";
+                 var ca = document.cookie.split(';');
+                 for(var i=0; i<ca.length; i++) {
+                 var c = ca[i];
+                 while (c.charAt(0)==' ') c = c.substring(1);
+                 if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
+                 //                console.log(c.substring(name.length, c.length));
+                 }
+                 return "nothing";
+
+                 };*/
             }
         };
 
@@ -42,7 +59,7 @@
            };
 
 
-
+//this gets the cookie contents and returns them
         this.getCookie = function() {
             var name = "rollingSharpener" + "=";
             var ca = document.cookie.split(';');
