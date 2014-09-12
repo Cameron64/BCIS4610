@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="business">
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="js/angular.min.js"></script>
+    <script src="js/magic.js"></script>
+    <script src="js/array.json"></script>
+    <script src="http://code.angularjs.org/1.2.5/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-cookies.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title></title>
+</head>
+<body>
+
+<div class="container">
+    <div class="search">
+        <button class="btn btn-sm btn-primary" type="button">Submit Order</button>
+        <input type="text" ng-model="searchText" placeholder="Search" class="searchBox">
+    </div>
+
+    <article ng-controller="productController as productCtrl" >
+<div ng-init="productCtrl.checkCookie()"></div>
+        <div  ng-repeat="product in productCtrl.products | filter:searchText" class="repeat-animation" >
+            <div ng-class="productCtrl.getClass(product.name)" id="{{product.name}}"  >
+
+
+
+                    <div class="boxInner">
+                    <strong >{{product.name}}</strong>
+                    <p> {{product.description}} </p>
+
+
+
+
+                <img ng-click=" productCtrl.select(product.name)" ng-src="{{product.pic}}" />
+
+
+
+            </div>
+
+                </div>
+
+        </div>
+        <!--<div ng-init="productCtrl.checkBasket(product.name)"></div>-->
+        <!--<div ng-init="productCtrl.checkBasket()"></div>-->
+
+    </article>
+</div>
+</body>
+</html>
