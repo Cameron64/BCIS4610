@@ -5,9 +5,34 @@
 
     var app = angular.module('business', ['ngAnimate']);
 
-    app.controller('productController', ['$http', '$timeout',  function ($http, $timeout) {
+    app.directive( 'goClick', function ( $location ) {
+        return function ( scope, element, attrs ) {
+            var path;
+
+            attrs.$observe( 'goClick', function (val) {
+                path = val;
+            });
+
+            element.bind( 'click', function () {
+                scope.$apply( function () {
+                    $location.path( path );
+                });
+            });
+        };
+    });
+
+    app.controller('MainCtrl', function($scope, $location) {
+        $scope.$watch( function () { return $location.path(); }, function (path) {
+            $scope.path = path;
+        });
+    });
+
+    app.controller('productController', ['$http', function ($http) {
 
         scop = this;
+/*
+       declares productController.products to be the json array
+*/
         $http.get('js/array.json').then(function(res){scop.products = res.data;});
         this.basket = [];
 
@@ -48,7 +73,7 @@
             }
         };
 
-
+/*class of product boxes is tied to this function, returns name of class based on whether it is in this.basket*/
            this.getClass = function(name){
              if(this.basket.indexOf(name) >= 0) {
                  return "boxSelected";
@@ -59,7 +84,7 @@
            };
 
 
-//this gets the cookie contents and returns them
+//this gets the cookie contents and returns them, if blank it returns a string of "nothing"
         this.getCookie = function() {
             var name = "rollingSharpener" + "=";
             var ca = document.cookie.split(';');
@@ -72,7 +97,9 @@
             return "nothing";
 
         };
-
+/*sets a cookie with the name of "rollingSharpener"
+* assigns it a value of this.basket
+* expires in 10 days*/
         this.setCookie = function() {
                 var d = new Date();
                 d.setTime(d.getTime() + (10 * 24 * 60 * 60 * 1000));
@@ -81,15 +108,20 @@
         };
 
 
-
+/*receives name of product selected
+* pushes it into this.basket
+* then updates the cookie*/
         this.addProduct = function(product){
          this.basket.push(product);
             console.log(this.basket);
+            /*should not need this line to change class on selection, but breaks when removed, same for next method*/
          document.getElementById(product).className = "boxSelected";
             this.setCookie();
         };
 
-
+/*receives name of product
+* removes name from this.basket
+* then updates the cookie*/
         this.removeProduct = function(product){
 
             this.a = this.basket.indexOf(product);
@@ -100,10 +132,10 @@
 
         };
 
-
+/*receives name of product selected
+* if it is not found in this.basket, it sends the name to addProduct
+* if it finds the name in this.basket, it sends the name to removeProduct*/
         this.select = function(id) {
-
-
 
             if(this.basket.indexOf(id) < 0){
                 this.addProduct(id);
