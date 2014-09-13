@@ -23,10 +23,10 @@ body {
     bottom:0;
 }
 .container{
-    position: absolute;
-    height: 100%;
-    left: 10%;
-    width: 80%;
+    position: relative;
+    height: 500px;
+    /* left: 10%; */
+    width: 947px;
     background-color: white;
 
 }
@@ -55,7 +55,7 @@ body {
     right: 10px;
     top: 10px;
     bottom: 10px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .boxInner img {
     width: 100%;
@@ -94,3 +94,4 @@ body {
     opacity:1;
     line-height:20px;
 }
+
