@@ -110,6 +110,15 @@
 
         };
 
+        this.removeProductCheckout = function(product){
+
+            this.a = this.basket.indexOf(product);
+            this.basket.splice(this.a,1);
+            console.log(this.basket);
+            this.setCookie();
+
+        };
+
 /*receives name of product selected
 * if it is not found in this.basket, it sends the name to addProduct
 * if it finds the name in this.basket, it sends the name to removeProduct*/
