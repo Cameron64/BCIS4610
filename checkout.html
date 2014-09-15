@@ -117,6 +117,33 @@
     <div id="CENTER_WHITE"><!-- ~~~~~ CENTRAL PANELS ~~~~~ -->
 <!--This is where product invoice-->
 
+
+        <div ng-controller="productController as productCtrl">
+            <div ng-init="productCtrl.checkCookie()"></div>
+
+
+
+                <div class="productName">Product Name</div>
+
+
+
+
+            <div  ng-repeat="product in productCtrl.basket">
+
+                <div class="tableRow">
+
+               {{product}}
+                    <input class="tableRow2" type="number" value="1" maxlength="5" size="5" name="quantity" min="1">
+                </div>
+
+</div>
+
+
+</div>
+
+
+
+
 <!--end product invoice-->
     </div><!-- end CENTER-WHITE -->
 
