@@ -19,16 +19,15 @@
         this.checkCookie = function() {
             //if page has no cookie, create a cookie, else, dissect the cookie and add contents into basket then populate the page
             var cookieName=this.getCookie();
-            console.log(cookieName === "nothing");
             if(cookieName === "nothing"){
                 this.setCookie();
+                /*remove first empty item in array*/
+                this.basket.shift();
             }
             else {
                 // else, dissect the cookie and add contents into basket
-                console.log("dissecting cookie");
                 //this line turns the cookie into an array
                 this.basket = this.getCookie().split(",");
-                console.log("printing basket");
                 console.log(this.basket);
 
 

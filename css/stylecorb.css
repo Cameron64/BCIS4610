@@ -10,6 +10,12 @@ body {
     height: 20%;
     background-color:lightgrey;
 }
+.search2{
+    position:relative;
+    width:100%;
+    height:50px;
+    right:20px;
+}
 .searchBox{
     position: absolute;
     bottom: 0px;
