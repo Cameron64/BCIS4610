@@ -115,10 +115,12 @@
 
     <div id="CENTER_WHITE"><!-- ~~~~~ CENTRAL PANELS ~~~~~ -->
 <!--This is where product invoice-->
-        <div class="search2">
-        <button class="btn btn-sm btn-primary" type="button" onclick="location.href='invoice.html'" >Submit Order</button>
-        </div>
         <div ng-controller="productController as productCtrl">
+            <form name="reviewForm" ng-submit="formSubmit()">
+        <div class="search2">
+        <button ng-click="productCtrl.formSubmit()" class="btn btn-sm btn-primary" type="button" >Submit Order</button>
+        </div>
+
             <div ng-init="productCtrl.checkCookie()"></div>
 
 
@@ -128,7 +130,7 @@
 
 
 
-            <div  ng-repeat="product in productCtrl.basket">
+            <div  ng-repeat="product in productCtrl.basket" class="repeat-animation">
 
                 <div class="tableRow">
 
@@ -138,7 +140,7 @@
                 </div>
 
 </div>
-
+            </form>
 
 </div>
 
