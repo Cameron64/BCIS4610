@@ -22,12 +22,15 @@
             if(cookieName === "nothing"){
                 this.setCookie();
                 /*remove first empty item in array*/
-                this.basket.shift();
+                if(this.basket[0] === ""){
+                this.basket.shift();}
             }
             else {
                 // else, dissect the cookie and add contents into basket
                 //this line turns the cookie into an array
                 this.basket = this.getCookie().split(",");
+                if(this.basket[0] === ""){
+                    this.basket.shift();}
                 console.log(this.basket);
 
 
