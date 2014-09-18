@@ -31,19 +31,21 @@
 
         this.checkCookie = function() {
             //if page has no cookie, create a cookie, else, dissect the cookie and add contents into basket then populate the page
-            var cookieName=this.getCookie();
-            if(cookieName === "nothing"){
+            var cookieValue=this.getCookie();
+            if(cookieValue === "nothing"){
                 this.setCookie();
                 /*remove first empty item in array*/
                 if(this.basket[0] === ""){
-                this.basket.shift();}
+                this.basket.shift();
+               }
             }
             else {
                 // else, dissect the cookie and add contents into basket
                 //this line turns the cookie into an array
                 this.basket = this.getCookie().split(",");
                 if(this.basket[0] === ""){
-                    this.basket.shift();}
+                    this.basket.shift();
+                    }
 
 
 
@@ -66,7 +68,46 @@
                  };*/
             }
         };
+        this.basketNames = function(){
 
+            for(var i = 0; i<= this.basket.length; i++){
+                var item = this.basket[i];
+
+
+                var index = this.products.length;
+                while( index-- ) {
+                    if( list[index]._id === item ) break;
+                }
+
+                console.log(this.products.id);
+
+
+
+                this.basket[i][1] = this.products[index].id;
+                console.log(this.basket);
+            }
+        };
+        this.checkCookie2 = function() {
+            //if page has no cookie, create a cookie, else, dissect the cookie and add contents into basket then populate the page
+            var cookieValue=this.getCookie();
+            if(cookieValue === "nothing"){
+                this.setCookie();
+                /*remove first empty item in array*/
+                if(this.basket[0] === ""){
+                    this.basket.shift();
+                }
+            }
+            else {
+                // else, dissect the cookie and add contents into basket
+                //this line turns the cookie into an array
+                this.basket = this.getCookie().split(",");
+                if(this.basket[0] === ""){
+                    this.basket.shift();
+
+                }
+                this.basketNames();
+            }
+        };
 /*class of product boxes is tied to this function, returns name of class based on whether it is in this.basket*/
            this.getClass = function(name){
              if(this.basket.indexOf(name) >= 0) {
@@ -143,9 +184,6 @@
 
         };
 
-
     }]);
-
-
 
 })();
