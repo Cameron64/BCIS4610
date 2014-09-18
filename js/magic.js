@@ -15,6 +15,19 @@
         $http.get('js/array.json').then(function(res){scop.products = res.data;});
         this.basket = [];
 
+        //this gets the cookie contents and returns them, if blank it returns a string of "nothing"
+        this.getCookie = function() {
+            var name = "rollingSharpener" + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0; i<ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1);
+                if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
+//                console.log(c.substring(name.length, c.length));
+            }
+            return "nothing";
+
+        };
 
         this.checkCookie = function() {
             //if page has no cookie, create a cookie, else, dissect the cookie and add contents into basket then populate the page
@@ -65,19 +78,7 @@
            };
 
 
-//this gets the cookie contents and returns them, if blank it returns a string of "nothing"
-        this.getCookie = function() {
-            var name = "rollingSharpener" + "=";
-            var ca = document.cookie.split(';');
-            for(var i=0; i<ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0)==' ') c = c.substring(1);
-                if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
-//                console.log(c.substring(name.length, c.length));
-            }
-            return "nothing";
 
-        };
 /*sets a cookie with the name of "rollingSharpener"
 * assigns it a value of this.basket
 * expires in 10 days*/
