@@ -4,8 +4,8 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="angular-animate" level="application" />
-    <orderEntry type="library" name="angular-cookies" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="ng-infinite-scroll" level="application" />
   </component>
 </module>
 

@@ -3,7 +3,7 @@
  */
 (function() {
 
-    var app = angular.module('business', ['ngAnimate']);
+    var app = angular.module('business', ['ngAnimate', 'infinite-scroll']);
 
 
     app.controller('productController', ['$http', function ($http) {
@@ -31,7 +31,7 @@
                 this.basket = this.getCookie().split(",");
                 if(this.basket[0] === ""){
                     this.basket.shift();}
-                console.log(this.basket);
+
 
 
                 //corbin, these lines
@@ -94,7 +94,6 @@
 * then updates the cookie*/
         this.addProduct = function(product){
          this.basket.push(product);
-            console.log(this.basket);
             /*should not need this line to change class on selection, but breaks when removed, same for next method*/
          document.getElementById(product).className = "boxSelected";
             this.setCookie();
@@ -117,7 +116,6 @@
 
             this.a = this.basket.indexOf(product);
             this.basket.splice(this.a,1);
-            console.log(this.basket);
             this.setCookie();
 
         };

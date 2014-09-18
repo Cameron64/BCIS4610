@@ -2,10 +2,14 @@
 <html ng-app="business">
 <head lang="en">
     <meta charset="UTF-8">
+
     <script src="js/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://code.angularjs.org/1.2.5/angular-animate.js"></script>
+    <script src="js/ngInfiniteScroll-1.0.0/build/ng-infinite-scroll.min.js"></script>
     <script src="js/magic.js"></script>
     <script src="js/array.json"></script>
-    <script src="http://code.angularjs.org/1.2.5/angular-animate.js"></script>
+
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/stylecorb.css" />
     <title></title>
@@ -124,10 +128,10 @@
                 <input type="text" ng-model="searchText" placeholder="Search" class="searchBox">
             </div>
 
-            <article ng-controller="productController as productCtrl" >
+            <div ng-controller="productController as productCtrl" >
                 <div ng-init="productCtrl.checkCookie()"></div>
                 <div  ng-repeat="product in productCtrl.products | limitTo:25 | filter:searchText" class="repeat-animation" >
-                    <div ng-click=" productCtrl.select(product.name)"ng-class="productCtrl.getClass(product.name)" id="{{product.name}}"  >
+                    <div ng-click=" productCtrl.select(product.name)" ng-class="productCtrl.getClass(product.name)" id="{{product.name}}"  >
 
 
 
@@ -150,7 +154,7 @@
               <!--  <div ng-init="productCtrl.checkBasket(product.name)"></div>
                 <div ng-init="productCtrl.checkBasket()"></div>-->
 
-            </article>
+            </div>
 
         </div><!-- end text -->
 
