@@ -71,19 +71,12 @@
         this.basketNames = function(){
 
             for(var i = 0; i<= this.basket.length; i++){
-                var item = this.basket[i];
-
-
-                var index = this.products.length;
-                while( index-- ) {
-                    if( list[index]._id === item ) break;
-                }
-
-                console.log(this.products.id);
+                this.item = this.basket[i];
 
 
 
-                this.basket[i][1] = this.products[index].id;
+
+                this.basket[i][1] = this.products;
                 console.log(this.basket);
             }
         };
