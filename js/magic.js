@@ -14,7 +14,6 @@
 */
         $http.get('js/array.json').then(function(res){scop.products = res.data;});
         this.basket = [];
-        this.cart = [];
 
         //this gets the cookie contents and returns them, if blank it returns a string of "nothing"
         this.getCookie = function() {
@@ -49,43 +48,8 @@
                     }
             }
         };
-        this.basketNames = function(){
-
-          /*  for(var i = 0; i<= this.basket.length-1; i++){
-                this.item = this.basket[i];
-
-
-                console.log(this.products);
-
-
-                this.cart[i] = this.products.item;
-                console.log(this.cart);
-            }*/
-        };
-        this.checkCookie2 = function() {
-            //if page has no cookie, create a cookie, else, dissect the cookie and add contents into basket then populate the page
-            var cookieValue=this.getCookie();
-            if(cookieValue === "nothing"){
-                this.setCookie();
-                /*remove first empty item in array*/
-                if(this.basket[0] === ""){
-                    this.basket.shift();
-                }
-            }
-            else {
-                // else, dissect the cookie and add contents into basket
-                //this line turns the cookie into an array
-                this.basket = this.getCookie().split(",");
-                if(this.basket[0] === ""){
-                    this.basket.shift();
-
-                }
-                console.log(this.basket);
-
-            }
-        };
         this.isInBasket = function(n){
-
+/*returns true or false based on whether the name is in the basket*/
 
           return (this.basket.indexOf(n) !== -1);
 

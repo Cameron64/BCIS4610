@@ -3,8 +3,8 @@
 <head lang="en">
     <meta charset="UTF-8">
 
-    <script src="js/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/angular.min.js"></script>
     <script src="http://code.angularjs.org/1.2.5/angular-animate.js"></script>
     <script src="js/ngInfiniteScroll-1.0.0/build/ng-infinite-scroll.min.js"></script>
     <script src="js/magic.js"></script>
@@ -131,14 +131,14 @@
             <div ng-controller="productController as productCtrl" >
 
                 <div ng-init="productCtrl.checkCookie()"></div>
-                <div infinite-scroll="myPagingFunction()" infinite-scroll-distance="3">
-                   <div  ng-repeat="product in productCtrl.products | filter:searchText" class="repeat-animation" >
+                <div infinite-scroll="myPagingFunction()">
+                   <div  ng-repeat="product in productCtrl.products | filter:searchText"  >
 
-                       <div ng-class="productCtrl.getClass(product.name)" id="{{product.name}}"  >
+                       <div ng-click="productCtrl.select(product.name)" ng-class="productCtrl.getClass(product.name)" id="{{product.name}}"  >
 
 
 
-                            <div ng-click="productCtrl.select(product.name)" class="boxInner" ng-class="productCtrl.getClass(product.id)" >
+                            <div  class="boxInner" ng-class="productCtrl.getClass(product.id)" >
                                 <strong>{{product.id}}</strong>
 
                         </div>
@@ -146,8 +146,7 @@
                     </div>
                        </div>
                 </div>
-              <!--  <div ng-init="productCtrl.checkBasket(product.name)"></div>
-                <div ng-init="productCtrl.checkBasket()"></div>-->
+
 
             </div>
 
@@ -170,7 +169,6 @@
 </div><!-- end RIGHT-GRAY-PANEL -->
 
 
-    </article>
-</div>
+
 </body>
 </html>
