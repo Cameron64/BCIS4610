@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/stylecorb.css" />
-    <title></title>
+    <title>RSH</title>
 </head>
 <body>
 
@@ -129,27 +129,22 @@
             </div>
 
             <div ng-controller="productController as productCtrl" >
+
                 <div ng-init="productCtrl.checkCookie()"></div>
-                <div  ng-repeat="(key, data) in productCtrl.products | limitTo:25 | filter:searchText" class="repeat-animation" >
-                    <div ng-click=" productCtrl.select(key)" ng-class="productCtrl.getClass(key)" id="{{key}}"  >
+                <div infinite-scroll="myPagingFunction()" infinite-scroll-distance="3">
+                   <div  ng-repeat="product in productCtrl.products | filter:searchText" class="repeat-animation" >
+
+                       <div ng-class="productCtrl.getClass(product.name)" id="{{product.name}}"  >
 
 
 
-                        <div class="boxInner">
-                            <strong >{{data.id}}</strong>
-
-
-
-
-
-
-
-
+                            <div ng-click="productCtrl.select(product.name)" class="boxInner" ng-class="productCtrl.getClass(product.id)" >
+                                <strong>{{product.id}}</strong>
 
                         </div>
 
                     </div>
-
+                       </div>
                 </div>
               <!--  <div ng-init="productCtrl.checkBasket(product.name)"></div>
                 <div ng-init="productCtrl.checkBasket()"></div>-->

@@ -133,12 +133,12 @@
 
 
 
-            <div  ng-repeat="product in productCtrl.basket" class="repeat-animation">
+            <div  ng-repeat="product in productCtrl.products" class="repeat-animation">
 
-                <div class="tableRow">
+                <div class="tableRow" ng-show="productCtrl.isInBasket(product.name)" >
 
-               {{product}}
-                    <div ng-click="productCtrl.removeProductCheckout(product)" class="removeItem">x</div>
+               {{product.id}}
+                    <div ng-click="productCtrl.removeProductCheckout(product.name)" class="removeItem">x</div>
                     <input class="tableRow2" type="number" value="1"  name="quantity" min="1">
                 </div>
 

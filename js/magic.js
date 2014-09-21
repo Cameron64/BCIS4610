@@ -14,6 +14,7 @@
 */
         $http.get('js/array.json').then(function(res){scop.products = res.data;});
         this.basket = [];
+        this.cart = [];
 
         //this gets the cookie contents and returns them, if blank it returns a string of "nothing"
         this.getCookie = function() {
@@ -46,39 +47,20 @@
                 if(this.basket[0] === ""){
                     this.basket.shift();
                     }
-
-
-
-                //corbin, these lines
-               /* var j = [];
-                 j = getCookie().split(",");*/
-
-                //this gets the cookie contents and returns them
-                /*this.getCookie = function() {
-                 var name = "rollingSharpener" + "=";
-                 var ca = document.cookie.split(';');
-                 for(var i=0; i<ca.length; i++) {
-                 var c = ca[i];
-                 while (c.charAt(0)==' ') c = c.substring(1);
-                 if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
-                 //                console.log(c.substring(name.length, c.length));
-                 }
-                 return "nothing";
-
-                 };*/
             }
         };
         this.basketNames = function(){
 
-            for(var i = 0; i<= this.basket.length; i++){
+          /*  for(var i = 0; i<= this.basket.length-1; i++){
                 this.item = this.basket[i];
 
 
+                console.log(this.products);
 
 
-                this.basket[i][1] = this.products;
-                console.log(this.basket);
-            }
+                this.cart[i] = this.products.item;
+                console.log(this.cart);
+            }*/
         };
         this.checkCookie2 = function() {
             //if page has no cookie, create a cookie, else, dissect the cookie and add contents into basket then populate the page
@@ -98,8 +80,16 @@
                     this.basket.shift();
 
                 }
-                this.basketNames();
+                console.log(this.basket);
+
             }
+        };
+        this.isInBasket = function(n){
+
+
+          return (this.basket.indexOf(n) !== -1);
+
+
         };
 /*class of product boxes is tied to this function, returns name of class based on whether it is in this.basket*/
            this.getClass = function(name){
