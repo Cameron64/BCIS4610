@@ -3,7 +3,7 @@
  */
 (function() {
 
-    var app = angular.module('business', ['ngAnimate', 'infinite-scroll']);
+    var app = angular.module('business', ['ngAnimate']);
 
 
     app.controller('productController', ['$http', function ($http) {

@@ -6,9 +6,10 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="http://code.angularjs.org/1.2.5/angular-animate.js"></script>
-    <script src="js/ngInfiniteScroll-1.0.0/build/ng-infinite-scroll.min.js"></script>
     <script src="js/magic.js"></script>
     <script src="js/array.json"></script>
+
+
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/stylecorb.css" />
@@ -121,17 +122,17 @@
 
         <div id="primary">
             <!-- is a title really necessary? -->
-            <h1>Rolling Sharpening Stone</h1><div class="text"><p>text goes here</p>
+            <h1>Rolling Sharpening Stone</h1><div class="text"><p></p>
             <p>&#160;</p>
             <div class="search">
-                <button class="btn btn-sm btn-primary" type="button" onclick="location.href='checkout.html'" >Submit Order</button>
+                <button class="btn btn-sm btn-primary" type="button" onclick="location.href='checkout.html'" >Review Order</button>
                 <input type="text" ng-model="searchText" placeholder="Search" class="searchBox">
             </div>
 
             <div ng-controller="productController as productCtrl" >
 
                 <div ng-init="productCtrl.checkCookie()"></div>
-                <div infinite-scroll="myPagingFunction()">
+
                    <div  ng-repeat="product in productCtrl.products | filter:searchText"  >
 
                        <div ng-click="productCtrl.select(product.name)" ng-class="productCtrl.getClass(product.name)" id="{{product.name}}"  >
@@ -145,7 +146,7 @@
 
                     </div>
                        </div>
-                </div>
+
 
 
             </div>
