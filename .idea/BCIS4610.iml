@@ -6,6 +6,9 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jquery" level="application" />
     <orderEntry type="library" name="ng-infinite-scroll" level="application" />
+    <orderEntry type="library" name="angular" level="application" />
+    <orderEntry type="library" name="angular-1.0.0rc3" level="application" />
+    <orderEntry type="library" name="angular-animate" level="application" />
   </component>
 </module>
 

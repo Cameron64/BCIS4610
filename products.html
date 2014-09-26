@@ -3,9 +3,10 @@
 <head lang="en">
     <meta charset="UTF-8">
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
     <script src="js/angular.min.js"></script>
     <script src="http://code.angularjs.org/1.2.5/angular-animate.js"></script>
+    <script src="js/array.json"></script>
     <script src="js/magic.js"></script>
     <script src="js/array.json"></script>
 
@@ -127,9 +128,15 @@
             <div class="search">
                 <button class="btn btn-sm btn-primary" type="button" onclick="location.href='checkout.html'" >Review Order</button>
                 <input type="text" ng-model="searchText" placeholder="Search" class="searchBox">
+
+
             </div>
 
             <div ng-controller="productController as productCtrl" >
+
+                <select id="category" ng-model="searchText" ng-options="o as o for o in productCtrl.groups">
+                    <option value="">Categories</option>
+                </select>
 
                 <div ng-init="productCtrl.checkCookie()"></div>
 

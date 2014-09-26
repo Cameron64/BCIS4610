@@ -13,6 +13,8 @@
        declares productController.products to be the json array
 */
         $http.get('js/array.json').then(function(res){scop.products = res.data;});
+        $http.get('js/groups.json').then(function(res){scop.groups = res.data;});
+
         this.basket = [];
 
         //this gets the cookie contents and returns them, if blank it returns a string of "nothing"
@@ -95,7 +97,6 @@
 
             this.a = this.basket.indexOf(product);
             this.basket.splice(this.a,1);
-            console.log(this.basket);
             document.getElementById(product).className = "box";
             this.setCookie();
 
@@ -130,6 +131,8 @@
 
 
         };
+
+
 
     }]);
 

@@ -44,7 +44,10 @@ body {
     float: left;
     position: relative;
     width: 20%;
-    padding-bottom: 20%;
+    padding-bottom: 25%;
+}
+.box:hover{
+
 }
 .boxSelected{
     float: left;
@@ -59,6 +62,8 @@ body {
     right: 10px;
     top: 10px;
     bottom: 10px;
+    height:80%;
+    width:80%;
     /* overflow: hidden; */
 }
 .boxInner img {
@@ -282,3 +287,10 @@ border-bottom: 1px solid black;
      position:relative;
      top:1px;
  }
+#category{
+    position:absolute;
+    left:210px;
+    top:70px;
+    height:20px;
+    width: 150px;
+}
