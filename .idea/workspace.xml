@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b05d17d8-b0d9-40c3-b537-712091fbdae2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/groups.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/ngAutocomplete.js" />
-      <change type="DELETED" beforePath="C:\Users\camer_000\WebstormProjects\BCIS4610\js\ngInfiniteScroll-1.0.0\.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\camer_000\WebstormProjects\BCIS4610\js\ngInfiniteScroll-1.0.0\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\camer_000\WebstormProjects\BCIS4610\js\ngInfiniteScroll-1.0.0\Gruntfile.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\camer_000\WebstormProjects\BCIS4610\js\ngInfiniteScroll-1.0.0\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\camer_000\WebstormProjects\BCIS4610\js\ngInfiniteScroll-1.0.0\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\camer_000\WebstormProjects\BCIS4610\js\ngInfiniteScroll-1.0.0\bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\camer_000\WebstormProjects\BCIS4610\js\ngInfiniteScroll-1.0.0\build\ng-infinite-scroll.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\camer_000\WebstormProjects\BCIS4610\js\ngInfiniteScroll-1.0.0\build\ng-infinite-scroll.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\camer_000\WebstormProjects\BCIS4610\js\ngInfiniteScroll-1.0.0\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\camer_000\WebstormProjects\BCIS4610\js\ngInfiniteScroll-1.0.0\src\infinite-scroll.coffee" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/BCIS4610.iml" afterPath="$PROJECT_DIR$/.idea/BCIS4610.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/array.json" afterPath="$PROJECT_DIR$/js/array.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout.html" afterPath="$PROJECT_DIR$/checkout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/magic.js" afterPath="$PROJECT_DIR$/js/magic.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/products.html" afterPath="$PROJECT_DIR$/products.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/stylecorb.css" afterPath="$PROJECT_DIR$/css/stylecorb.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BCIS4610.iws" />
@@ -44,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="magic.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="magic.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/magic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.8724139" vertical-offset="0" max-vertical-offset="2448">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1666" max-vertical-offset="2448">
               <caret line="98" column="41" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
               <folding />
             </state>
@@ -57,18 +39,18 @@
       <file leaf-file-name="array.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/array.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.5" vertical-offset="16782" max-vertical-offset="17391">
+            <state vertical-scroll-proportion="0.0" vertical-offset="16782" max-vertical-offset="17391">
               <caret line="1017" column="158" selection-start-line="1017" selection-start-column="158" selection-end-line="1017" selection-end-column="158" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="products.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="products.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/products.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="3179">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.49722737" vertical-offset="2128" max-vertical-offset="3179">
+              <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -77,7 +59,7 @@
       <file leaf-file-name="groups.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/groups.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.4565217" vertical-offset="243" max-vertical-offset="731">
+            <state vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="731">
               <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
               <folding />
             </state>
@@ -127,8 +109,8 @@
         <option value="$PROJECT_DIR$/js/groups..json" />
         <option value="$PROJECT_DIR$/js/array.json" />
         <option value="$PROJECT_DIR$/js/magic.js" />
-        <option value="$PROJECT_DIR$/products.html" />
         <option value="$PROJECT_DIR$/css/stylecorb.css" />
+        <option value="$PROJECT_DIR$/products.html" />
       </list>
     </option>
   </component>
@@ -164,6 +146,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -216,7 +199,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -256,14 +238,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -274,14 +248,12 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" />
-      <option name="executablePath" />
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
       <option name="filePath" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -289,6 +261,16 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
+      <option name="filePath" />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -381,18 +363,20 @@
       <created>1411664851804</created>
       <updated>1411664851804</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added catagories json and functionality, adjusted css for product page">
+      <created>1411708768152</created>
+      <updated>1411708768152</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1384" height="738" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22547585" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -403,9 +387,11 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -439,7 +425,8 @@
     <MESSAGE value="Used old array, fixed display of names on checkout.html" />
     <MESSAGE value="General cleanup, some css changes to center_white to stretch to bottom and removed animation on first page" />
     <MESSAGE value="Remove infinite-scroll&#10;&#10;Was not working and was not going to offer correct search capibilities" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove infinite-scroll&#10;&#10;Was not working and was not going to offer correct search capibilities" />
+    <MESSAGE value="Added catagories json and functionality, adjusted css for product page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added catagories json and functionality, adjusted css for product page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -796,7 +783,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/groups.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.4565217" vertical-offset="243" max-vertical-offset="731">
+        <state vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="731">
           <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
           <folding />
         </state>
@@ -804,16 +791,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/array.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.5" vertical-offset="16782" max-vertical-offset="17391">
+        <state vertical-scroll-proportion="0.0" vertical-offset="16782" max-vertical-offset="17391">
           <caret line="1017" column="158" selection-start-line="1017" selection-start-column="158" selection-end-line="1017" selection-end-column="158" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="3179">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -828,8 +807,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/magic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.8724139" vertical-offset="0" max-vertical-offset="2448">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1666" max-vertical-offset="2448">
           <caret line="98" column="41" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49722737" vertical-offset="2128" max-vertical-offset="3179">
+          <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
           <folding />
         </state>
       </provider>

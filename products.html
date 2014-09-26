@@ -134,13 +134,13 @@
 
             <div ng-controller="productController as productCtrl" >
 
-                <select id="category" ng-model="searchText" ng-options="o as o for o in productCtrl.groups">
+                <select id="category" ng-model="category" ng-options="o as o for o in productCtrl.groups">
                     <option value="">Categories</option>
                 </select>
 
                 <div ng-init="productCtrl.checkCookie()"></div>
 
-                   <div  ng-repeat="product in productCtrl.products | filter:searchText"  >
+                   <div  ng-repeat="product in productCtrl.products | filter:searchText | filter:category"  >
 
                        <div ng-click="productCtrl.select(product.name)" ng-class="productCtrl.getClass(product.name)" id="{{product.name}}"  >
 
