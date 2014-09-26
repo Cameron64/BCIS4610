@@ -5,7 +5,7 @@
 
 
     <script src="js/angular.min.js"></script>
-    <script src="http://code.angularjs.org/1.2.5/angular-animate.js"></script>
+    <script src="js/http_code.angularjs.org_1.3.0-beta.18_angular-animate.js"></script>
     <script src="js/array.json"></script>
     <script src="js/magic.js"></script>
     <script src="js/array.json"></script>
@@ -140,7 +140,7 @@
 
                 <div ng-init="productCtrl.checkCookie()"></div>
 
-                   <div  ng-repeat="product in productCtrl.products | filter:searchText | filter:category"  >
+                   <div ng-repeat="product in productCtrl.products | filter:searchText | filter:category | orderBy:'productCtrl.product.id'"  >
 
                        <div ng-click="productCtrl.select(product.name)" ng-class="productCtrl.getClass(product.name)" id="{{product.name}}"  >
 

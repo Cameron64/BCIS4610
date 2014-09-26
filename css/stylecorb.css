@@ -18,7 +18,7 @@ body {
 }
 .searchBox{
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     margin: 2px;
     height: 20px;
     width: 200px;
@@ -46,14 +46,14 @@ body {
     width: 20%;
     padding-bottom: 25%;
 }
-.box:hover{
+.box:hover  .boxInner{
 
 }
 .boxSelected{
     float: left;
     position: relative;
     width: 20%;
-    padding-bottom: 20%;
+    padding-bottom: 25%;
     background-color:lightgreen;
 }
 .boxInner {
@@ -71,42 +71,25 @@ body {
 }
 
 
-
-.repeat-animation.ng-enter-stagger,
-.repeat-animation.ng-leave-stagger,
-.repeat-animation.ng-move-stagger {
-    /* 200ms will be applied between each sucessive enter operation */
-    -webkit-transition-delay:0.01s;
-    transition-delay:0.01s;
+.animate-show-hide {
+    padding:10px;
+    border:1px solid black;
+    background:white;
 }
 
-.repeat-animation.ng-enter,
-.repeat-animation.ng-leave,
-.repeat-animation.ng-move {
-    -webkit-transition:0.01s linear all;
-    transition:0.01s linear all;
+.animate-show-hide {
+    -webkit-transition:all linear 0.5s;
+    transition:all linear 0.5s;
 }
 
-.repeat-animation.ng-leave.ng-leave-active,
-.repeat-animation.ng-enter,
-.repeat-animation.ng-move {
-    -webkit-transition:0.01s linear all;
-    transition:0.01s linear all;
-
+.animate-show-hide.ng-hide {
     opacity:0;
-    line-height:0;
 }
 
-.repeat-animation.ng-leave,
-.repeat-animation.ng-move.ng-move-active,
-.repeat-animation.ng-enter.ng-enter-active {
-    opacity:1;
-    line-height:20px;
-}
 
 #LOGOBLOCK {
     position: absolute;
-    left: 0px;
+    left: 0;
     top: -0px;
     width: 226px;
     height: 134px;
@@ -116,7 +99,7 @@ body {
 #TAGLINE {
     position: absolute;
     left: 226px;
-    top: 0px;
+    top: 0;
     width: 494px;
     height: 134px;
     border-left:   1px solid black;
@@ -125,7 +108,7 @@ body {
 #UTILITY {
     position: absolute;
     left: 720px;
-    top: 0px;
+    top: 0;
     width: 226px;
     height: 134px;
     border-left:   1px solid black;
@@ -135,7 +118,7 @@ body {
 
 #LEFT_SQUARE {
     position: absolute;
-    left: 0px;
+    left: 0;
     top: 134px;
     width: 226px;
     height: 179px;
@@ -166,7 +149,7 @@ body {
 
 #LEFT_NAV_PANEL {
     position: absolute;
-    left: 0px;
+    left: 0;
     top: 313px;
     width: 226px;
     height: 449px;
@@ -202,6 +185,7 @@ body {
     background-color: #ffffff;
     background-repeat: no-repeat;
     background-position: top center;
+    padding-bottom:50px;
 }
 
 
@@ -244,9 +228,9 @@ border-bottom: 1px solid black;
     margin-right:5px;
     position:relative;
     float:right;
-    -moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
-    -webkit-box-shadow:inset 0px 1px 0px 0px #f29c93;
-    box-shadow:inset 0px 1px 0px 0px #f29c93;
+    -moz-box-shadow:inset 0 1px 0 0 #f29c93;
+    -webkit-box-shadow:inset 0 1px 0 0 #f29c93;
+    box-shadow:inset 0 1px 0 0 #f29c93;
     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100) );
     background:-moz-linear-gradient( center top, #fe1a00 5%, #ce0100 100% );
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100');
@@ -266,7 +250,7 @@ border-bottom: 1px solid black;
     text-indent:0;
     display:inline-block;
     color:#ffffff;
-    font-family:Arial;
+    font-family:Arial,serif;
     font-size:10px;
     font-weight:bold;
     font-style:normal;
@@ -275,7 +259,7 @@ border-bottom: 1px solid black;
     width:15px;
     text-decoration:none;
     text-align:center;
-    text-shadow:1px 1px 0px #b23e35;
+    text-shadow:1px 1px 0 #b23e35;
 }
 .removeItem:hover {
     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00) );
@@ -293,4 +277,7 @@ border-bottom: 1px solid black;
     top:70px;
     height:20px;
     width: 150px;
+}
+.productContainer{
+    margin:20px;
 }
