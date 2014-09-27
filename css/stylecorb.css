@@ -281,3 +281,25 @@ border-bottom: 1px solid black;
 .productContainer{
     margin:20px;
 }
+.ng-invalid.ng-dirty{
+    border:red;
+}
+.ng-valid.ng-dirty{
+    border:green;
+}
+.inputFields{
+
+    position:relative;
+
+    background:lightblue;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:2px;
+    padding-bottom:20px;
+    width:100%;
+}
+.field{
+
+    margin-bottom:5px;
+    margin-right:400px;
+}

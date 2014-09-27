@@ -16,6 +16,13 @@
         $http.get('js/groups.json').then(function(res){scop.groups = res.data;});
 
         this.basket = [];
+        this.customer = {};
+        this.customer.email = "";
+        this.customer.num = "";
+        this.customer.restaurant = "";
+        this.customer.product=[];
+        this.customer.product.quantities=[];
+
 
         //this gets the cookie contents and returns them, if blank it returns a string of "nothing"
         this.getCookie = function() {
@@ -50,11 +57,28 @@
                     }
             }
         };
-        this.isInBasket = function(n){
+        this.isInBasket = function(n,index,id){
 /*returns true or false based on whether the name is in the basket*/
 
-          return (this.basket.indexOf(n) !== -1);
+          if (this.basket.indexOf(n) !== -1){
+              this.initBasket(n,index);
+              return true;
+          }
 
+
+        };
+
+        this.initBasket = function(n,index){
+
+            this.customer.product[this.basket.indexOf(n)] = this.products[index];
+            //this.customer.product.quantities[this.basket.indexOf(n)] = 1;
+
+        };
+
+        this.removeFromCB = function(product){
+            this.customer.product.splice(this.basket.indexOf(product),1);
+            this.customer.product.quantities.splice(this.basket.indexOf(product),1);
+            console.log(this.customer.product, this.customer.product.quantities);
 
         };
 /*class of product boxes is tied to this function, returns name of class based on whether it is in this.basket*/
@@ -107,6 +131,7 @@
             this.a = this.basket.indexOf(product);
             this.basket.splice(this.a,1);
             this.setCookie();
+            this.removeFromCB(product);
 
         };
 
@@ -128,12 +153,28 @@
 
         this.formSubmit = function(form){
 
-
+console.log( this.basket,
+            this.customer,
+this.customer.basket);
+            return true;
 
         };
 
 
 
+
+        this.updateQuantity = function(product){
+
+            this.customer.product.quantities[this.basket.indexOf(product)] = document.getElementById(product).value;
+            console.log(this.customer.product.quantities[this.basket.indexOf(product)]);
+
+        };
+
+        this.checkoutClass = function(){
+
+          return "tableRow2";
+
+        };
     }]);
 
 })();

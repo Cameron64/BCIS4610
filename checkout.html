@@ -119,27 +119,51 @@
     <div id="CENTER_WHITE"><!-- ~~~~~ CENTRAL PANELS ~~~~~ -->
 <!--This is where product invoice-->
         <div ng-controller="productController as productCtrl">
-            <form name="reviewForm" ng-submit="formSubmit()">
+            <form  name="customerForm" ng-submit="customerForm.$valid && productCtrl.formSubmit()" novalidate>
         <div class="search2">
-        <button ng-click="productCtrl.formSubmit()" class="btn btn-sm btn-primary" type="button" >Submit Order</button>
+        <input ng-click="productCtrl.formSubmit()" class="btn btn-sm btn-primary" type="submit" ></input>
         </div>
 
 
             <div ng-init="productCtrl.checkCookie()"></div>
 
-                <div  class="productName">Product Name</div>
 
+                <br>
+                <br>
+
+                <div class="inputFields">
+                    <h3>Contact Information</h3>
+                E-mail:
+                    <input type="email" required class="field" ng-model="productCtrl.customer.email"/> <br /><br />
+
+
+                Phone Number:
+                    <input type="tel" required class="field" ng-model="productCtrl.customer.num"/> <br/><br />
+                Company Name:
+                    <input type="text" required class="field" ng-model="productCtrl.customer.restaurant" /> <br />
+                </div>
+
+
+
+
+
+                <!--begin products-->
+
+                <div  class="productName">Product Name</div>
 
             <div  ng-repeat="product in productCtrl.products">
 
-                <div class="tableRow" ng-show="productCtrl.isInBasket(product.name)" >
-
+                <div class="tableRow" ng-show="productCtrl.isInBasket(product.name,$index,product.id)"  >
+<div ng-model="angie">
                {{product.id}}
+</div>
                     <div ng-click="productCtrl.removeProductCheckout(product.name)" class="removeItem">x</div>
-                    <input class="tableRow2" type="number" value="1"  name="quantity" min="1">
+                    <input class="tableRow2" type="number" id="product.name" ng-model="productCtrl.customer.product.quantities[productCtrl.basket.indexOf(product.name)]" >
                 </div>
 
 </div>
+                <!--ng-change="(productCtrl.updateQuantity(product.id))"-->
+<!--end products-->
             </form>
 
 </div>
