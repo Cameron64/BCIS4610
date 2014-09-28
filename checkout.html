@@ -154,9 +154,9 @@
             <div  ng-repeat="product in productCtrl.products">
 
                 <div class="tableRow" ng-show="productCtrl.isInBasket(product.name,$index,product.id)"  >
-<div ng-model="angie">
+
                {{product.id}}
-</div>
+
                     <div ng-click="productCtrl.removeProductCheckout(product.name)" class="removeItem">x</div>
                     <input class="tableRow2" type="number" id="product.name" ng-model="productCtrl.customer.product.quantities[productCtrl.basket.indexOf(product.name)]" >
                 </div>

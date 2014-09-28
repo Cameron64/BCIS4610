@@ -151,7 +151,7 @@
 
 
 
-        this.formSubmit = function(form){
+        this.formSubmit = function(){
 
 console.log( this.basket,
             this.customer,
@@ -161,20 +161,6 @@ this.customer.basket);
         };
 
 
-
-
-        this.updateQuantity = function(product){
-
-            this.customer.product.quantities[this.basket.indexOf(product)] = document.getElementById(product).value;
-            console.log(this.customer.product.quantities[this.basket.indexOf(product)]);
-
-        };
-
-        this.checkoutClass = function(){
-
-          return "tableRow2";
-
-        };
     }]);
 
 })();

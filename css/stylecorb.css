@@ -281,12 +281,7 @@ border-bottom: 1px solid black;
 .productContainer{
     margin:20px;
 }
-.ng-invalid.ng-dirty{
-    border:red;
-}
-.ng-valid.ng-dirty{
-    border:green;
-}
+
 .inputFields{
 
     position:relative;
