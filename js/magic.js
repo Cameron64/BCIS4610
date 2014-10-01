@@ -21,7 +21,8 @@
         this.customer.num = "";
         this.customer.restaurant = "";
         this.customer.product=[];
-        this.customer.product.quantities=[];
+        this.customer.quantities=[];
+        this.customer.comments= "";
 
 
         //this gets the cookie contents and returns them, if blank it returns a string of "nothing"
@@ -71,14 +72,14 @@
         this.initBasket = function(n,index){
 
             this.customer.product[this.basket.indexOf(n)] = this.products[index];
-            //this.customer.product.quantities[this.basket.indexOf(n)] = 1;
+            //this.customer.quantities[this.basket.indexOf(n)] = 1;
 
         };
 
         this.removeFromCB = function(product){
             this.customer.product.splice(this.basket.indexOf(product),1);
-            this.customer.product.quantities.splice(this.basket.indexOf(product),1);
-            console.log(this.customer.product, this.customer.product.quantities);
+            this.customer.quantities.splice(this.basket.indexOf(product),1);
+            console.log(this.customer.product, this.customer.quantities);
 
         };
 /*class of product boxes is tied to this function, returns name of class based on whether it is in this.basket*/
@@ -153,12 +154,22 @@
 
         this.formSubmit = function(){
 
-console.log( this.basket,
-            this.customer,
-this.customer.basket);
-            return true;
 
-        };
+                lol = this;
+                $http({
+                    method: 'POST',
+                    url: 'php/SendOrder.php',
+                    data: $.param({'customer' : JSON.stringify(lol.customer)}),
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+                }).
+                    success(function(response) {
+                        console.log(response);
+//                        console.log(lol.customer);
+                    })
+
+            };
+
+
 
 
     }]);

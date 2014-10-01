@@ -298,3 +298,17 @@ border-bottom: 1px solid black;
     margin-bottom:5px;
     margin-right:400px;
 }
+.comments{
+    position:absolute;
+    right:35px;
+    top: 80px;
+
+}
+.commentsBox{
+    height:100px;
+    width: 200px;
+}
+.commentHeader{
+    position:absolute;
+    bottom: 105px;
+}
