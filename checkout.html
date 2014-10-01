@@ -9,7 +9,6 @@
     <script src="js/magic.js"></script>
     <script src="js/array.json"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="js/jqueryfunctions.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/stylecorb.css" />
     <title></title>
@@ -120,7 +119,7 @@
     <div id="CENTER_WHITE"><!-- ~~~~~ CENTRAL PANELS ~~~~~ -->
 <!--This is where product invoice-->
         <div ng-controller="productController as productCtrl">
-            <form  name="customerForm" ng-submit="customerForm.$valid && productCtrl.formSubmit()" novalidate>
+            <form  name="customerForm" ng-submit="productCtrl.formSubmit()" >
         <div class="search2">
         <input ng-click="productCtrl.formSubmit()" class="btn btn-sm btn-primary" type="submit" ></input>
         </div>
@@ -136,25 +135,25 @@
                     <h3>Contact Information</h3>
                     <!--Email-->
                 E-mail:
-                    <input type="email" required class="field" ng-model="productCtrl.customer.email"/> <br /><br />
+                    <input type="email" id="email" required class="field" ng-model="productCtrl.customer.email"/> <br /><br />
 
 
                     <!--Phone Number-->
                 Phone Number:
-                    <input type="tel" required class="field" ng-model="productCtrl.customer.num"/>
+                    <input type="tel" id="tel" required class="field" ng-model="productCtrl.customer.num"/>
 
                     <!--comment Section-->
                     <div class="comments">
                         <div class="commentHeader">
                         Comments
                         </div>
-                    <textarea ng-model="productCtrl.customer.comments" class="commentsBox" name="comments" id="comments">
+                    <textarea ng-model="productCtrl.customer.comments" id="comments" class="commentsBox" name="comments" >
                     </textarea>
                     </div>
                     <!--Company Name-->
                     <br/><br />
                 Company Name:
-                    <input type="text" required class="field" ng-model="productCtrl.customer.restaurant" /> <br />
+                    <input type="text" id="name" required class="field" ng-model="productCtrl.customer.restaurant" /> <br />
                 </div>
 
 

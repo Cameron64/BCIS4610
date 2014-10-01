@@ -6,7 +6,31 @@
  * Time: 10:01 AM
  */
 
-$errors = [];
+
+
+function strip($inputz)
+{
+    $inputz = str_replace("'","\'", $inputz);
+    $inputz = str_replace('"','\"', $inputz);
+    $inputz = str_replace("$","\$", $inputz);
+    $inputz = str_replace("%","\%", $inputz);
+    $inputz = str_replace("http","-h-", $inputz);
+    $inputz = str_replace("/","-", $inputz);
+    $inputz = str_replace("<","-", $inputz);
+    $inputz = str_replace(">","-", $inputz);
+    $inputz = str_replace("[","-", $inputz);
+    $inputz = str_replace("]","-", $inputz);
+    $inputz = str_replace("(","-", $inputz);
+    $inputz = str_replace(")","-", $inputz);
+    $inputz = str_replace("{","-", $inputz);
+    $inputz = str_replace("}","-", $inputz);
+    $inputz = str_replace(":","-", $inputz);
+    $inputz = str_replace("url=","-u-", $inputz);
+    $inputz = str_replace("link=","-l-", $inputz);
+    return $inputz;
+}
+
+
 
 
 
@@ -15,12 +39,12 @@ $errors = [];
 $data = json_decode($_POST['customer']);
 $basket = array();
 $basketQuantities = array();
-$email = $data->email;
-$phone = $data->num;
-$company = $data->restaurant;
-$products = $data->product;
-$quantities = $data->quantities;
-$comments = $data->comments;
+$email = strip($data->email);
+$phone = strip($data->num);
+$company = strip($data->restaurant);
+$products = strip($data->product);
+$quantities = strip($data->quantities);
+$comments = strip($data->comments);
 
 
 for($i=0; $i<= sizeof($products,0)-1; $i++){
@@ -40,6 +64,16 @@ var_dump($email);
 var_dump($phone);
 var_dump($company);
 var_dump($comments);
+
+
+$mailTo = "Cameron64@ymail.com";
+$mailSubject = "New Order";
+$mailMessage = "This is a test";
+
+
+mail($mailTo,$mailSubject,$mailMessage);
+//header('Location: invoice.html');
+
 
 
 

@@ -155,6 +155,9 @@
         this.formSubmit = function(){
 
 
+            if(document.getElementById('email').checkValidity() && document.getElementById('tel').checkValidity()
+                && document.getElementById('name').checkValidity()){
+
                 lol = this;
                 $http({
                     method: 'POST',
@@ -164,8 +167,9 @@
                 }).
                     success(function(response) {
                         console.log(response);
-//                        console.log(lol.customer);
+                        window.location = "invoice.html";
                     })
+            }
 
             };
 
