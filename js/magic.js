@@ -15,8 +15,8 @@
         $http.get('js/array.json').then(function(res){scop.products = res.data;});
         $http.get('js/groups.json').then(function(res){scop.groups = res.data;});
 
-        this.basket = [];
-        this.customer = {};
+        this.basket =[];
+        this.customer ={};
         this.customer.email = "";
         this.customer.num = "";
         this.customer.restaurant = "";
@@ -160,15 +160,16 @@
 
                 lol = this;
                 $http({
-                    method: 'POST',
-                    url: 'php/SendOrder.php',
-                    data: $.param({'customer' : JSON.stringify(lol.customer)}),
-                    headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-                }).
-                    success(function(response) {
-                        console.log(response);
-                        window.location = "invoice.html";
-                    })
+                 method: 'POST',
+                 url: 'php/SendOrder.php',
+                 data: $.param({'customer' : JSON.stringify(lol.customer)}),
+                 headers: {'Content-Type': 'application/x-www-form-urlencoded; charset-UTF-8'}
+                 }).
+                 success(function(response) {
+                 console.log(response);
+                 //                        window.location = "invoice.html";
+                 })
+
             }
 
             };
