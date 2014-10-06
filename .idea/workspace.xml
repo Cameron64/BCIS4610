@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b05d17d8-b0d9-40c3-b537-712091fbdae2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/SendOrder.php" afterPath="$PROJECT_DIR$/php/SendOrder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/array.json" afterPath="$PROJECT_DIR$/js/array.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/magic.js" afterPath="$PROJECT_DIR$/js/magic.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -31,7 +29,7 @@
       <file leaf-file-name="magic.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/magic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="164" column="23" selection-start="5350" selection-end="5350" vertical-scroll-proportion="4.8486958" vertical-offset="0" max-vertical-offset="3247">
+            <state line="102" column="33" selection-start="3430" selection-end="3430" vertical-scroll-proportion="0.6208696" vertical-offset="1377" max-vertical-offset="3264">
               <folding />
             </state>
           </provider>
@@ -345,7 +343,11 @@
       <created>1412275652578</created>
       <updated>1412275652578</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Final functionality completed">
+      <created>1412629142466</created>
+      <updated>1412629142466</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -430,7 +432,8 @@
     <MESSAGE value="Added PHP functionality and imported all customer object attributes to be sent via email" />
     <MESSAGE value="cleanup, added invoice page" />
     <MESSAGE value="s" />
-    <option name="LAST_COMMIT_MESSAGE" value="s" />
+    <MESSAGE value="Final functionality completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final functionality completed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -754,7 +757,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/magic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="23" selection-start="5350" selection-end="5350" vertical-scroll-proportion="4.8486958" vertical-offset="0" max-vertical-offset="3247">
+        <state line="102" column="33" selection-start="3430" selection-end="3430" vertical-scroll-proportion="0.6208696" vertical-offset="1377" max-vertical-offset="3264">
           <folding />
         </state>
       </provider>
