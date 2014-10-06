@@ -160,7 +160,7 @@
             if(document.getElementById('email').checkValidity() && document.getElementById('tel').checkValidity()
                 && document.getElementById('name').checkValidity()){
 
-                if(this.count == 0){
+                if(this.count === 0){
                     this.count++;
                 lol = this;
                 $http({
