@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b05d17d8-b0d9-40c3-b537-712091fbdae2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/BCIS4610.iml" afterPath="$PROJECT_DIR$/.idea/BCIS4610.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/SendOrder.php" afterPath="$PROJECT_DIR$/php/SendOrder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/array.json" afterPath="$PROJECT_DIR$/js/array.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/magic.js" afterPath="$PROJECT_DIR$/js/magic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/products.html" afterPath="$PROJECT_DIR$/products.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BCIS4610.iws" />
@@ -30,22 +28,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="magic.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="magic.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/magic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="164" column="76" selection-start="5408" selection-end="5408" vertical-scroll-proportion="0.0" vertical-offset="2623" max-vertical-offset="3179">
+            <state line="164" column="23" selection-start="5350" selection-end="5350" vertical-scroll-proportion="4.8486958" vertical-offset="0" max-vertical-offset="3247">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SendOrder.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SendOrder.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/SendOrder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="18" selection-start="2303" selection-end="2303" vertical-scroll-proportion="0.27095518" vertical-offset="1340" max-vertical-offset="1853">
-              <folding>
-                <element signature="e#6#91#0" expanded="true" />
-              </folding>
+            <state line="92" column="0" selection-start="2388" selection-end="2388" vertical-scroll-proportion="-10.0" vertical-offset="1219" max-vertical-offset="1785">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -53,7 +49,7 @@
       <file leaf-file-name="invoice.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/invoice.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="50" selection-start="344" selection-end="344" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="2584">
+            <state line="10" column="50" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="2584">
               <folding />
             </state>
           </provider>
@@ -62,7 +58,7 @@
       <file leaf-file-name="products.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/products.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="54" selection-start="495" selection-end="495" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="3230">
+            <state line="13" column="54" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0" vertical-offset="2676" max-vertical-offset="3230">
               <folding />
             </state>
           </provider>
@@ -71,7 +67,7 @@
       <file leaf-file-name="checkout.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/checkout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="54" selection-start="89" selection-end="494" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="3570">
+            <state line="15" column="6" selection-start="529" selection-end="529" vertical-scroll-proportion="-1.9615384" vertical-offset="204" max-vertical-offset="3570">
               <folding />
             </state>
           </provider>
@@ -80,7 +76,7 @@
       <file leaf-file-name="stylecorb.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/stylecorb.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="318" column="23" selection-start="6129" selection-end="6129" vertical-scroll-proportion="0.0" vertical-offset="4904" max-vertical-offset="5525">
+            <state line="309" column="13" selection-start="5996" selection-end="5996" vertical-scroll-proportion="0.0" vertical-offset="3852" max-vertical-offset="5525">
               <folding />
             </state>
           </provider>
@@ -116,21 +112,21 @@
         <option value="$PROJECT_DIR$/productscorb.html" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/js/groups..json" />
-        <option value="$PROJECT_DIR$/js/array.json" />
         <option value="$PROJECT_DIR$/js/jqueryFunctions.js" />
         <option value="$PROJECT_DIR$/js/__ajax.googleapis.com_ajax_libs_jquery_2.1.1_jquery.js" />
         <option value="$PROJECT_DIR$/css/stylecorb.css" />
         <option value="$PROJECT_DIR$/invoice.html" />
         <option value="$PROJECT_DIR$/checkout.html" />
         <option value="$PROJECT_DIR$/products.html" />
-        <option value="$PROJECT_DIR$/js/magic.js" />
+        <option value="$PROJECT_DIR$/js/array.json" />
         <option value="$PROJECT_DIR$/php/SendOrder.php" />
+        <option value="$PROJECT_DIR$/js/magic.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP_Server" />
   <component name="ProjectFrameBounds">
-    <option name="width" value="683" />
+    <option name="width" value="1366" />
     <option name="height" value="720" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -147,7 +143,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -158,71 +154,7 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BCIS4610" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BCIS4610" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BCIS4610" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BCIS4610" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BCIS4610" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BCIS4610" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BCIS4610" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BCIS4610" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BCIS4610" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -409,7 +341,11 @@
       <created>1412205573298</created>
       <updated>1412205573298</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="s">
+      <created>1412275652578</created>
+      <updated>1412275652578</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -433,7 +369,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="683" height="720" extended-state="0" />
+    <frame x="0" y="0" width="1366" height="720" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -442,7 +378,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23007518" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -493,12 +429,55 @@
     <MESSAGE value="Cleanup" />
     <MESSAGE value="Added PHP functionality and imported all customer object attributes to be sent via email" />
     <MESSAGE value="cleanup, added invoice page" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleanup, added invoice page" />
+    <MESSAGE value="s" />
+    <option name="LAST_COMMIT_MESSAGE" value="s" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/magic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="164" column="76" selection-start="5408" selection-end="5408" vertical-scroll-proportion="0.0" vertical-offset="2443" max-vertical-offset="3179">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/SendOrder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="0" selection-start="2283" selection-end="2283" vertical-scroll-proportion="0.0" vertical-offset="1205" max-vertical-offset="1853">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invoice.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="50" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="2584">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="54" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0" vertical-offset="2676" max-vertical-offset="3230">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="54" selection-start="89" selection-end="494" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="3570">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/stylecorb.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="309" column="13" selection-start="5996" selection-end="5996" vertical-scroll-proportion="0.0" vertical-offset="3852" max-vertical-offset="5525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/stylecorb.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -731,52 +710,52 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/array.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/stylecorb.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="318" column="23" selection-start="6129" selection-end="6129" vertical-scroll-proportion="0.0" vertical-offset="4904" max-vertical-offset="5525">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/invoice.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="50" selection-start="344" selection-end="344" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="2584">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="54" selection-start="89" selection-end="494" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="3570">
+        <state line="10" column="50" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="2584">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/products.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="54" selection-start="495" selection-end="495" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="3230">
+        <state line="13" column="54" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0" vertical-offset="2676" max-vertical-offset="3230">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/magic.js">
+    <entry file="file://$PROJECT_DIR$/js/array.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="76" selection-start="5408" selection-end="5408" vertical-scroll-proportion="0.0" vertical-offset="2623" max-vertical-offset="3179">
+        <state line="1019" column="0" selection-start="191062" selection-end="191062" vertical-scroll-proportion="31.268953" vertical-offset="0" max-vertical-offset="17425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/stylecorb.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="309" column="13" selection-start="5996" selection-end="5996" vertical-scroll-proportion="0.0" vertical-offset="3852" max-vertical-offset="5525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="6" selection-start="529" selection-end="529" vertical-scroll-proportion="-1.9615384" vertical-offset="204" max-vertical-offset="3570">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/SendOrder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="18" selection-start="2303" selection-end="2303" vertical-scroll-proportion="0.27095518" vertical-offset="1340" max-vertical-offset="1853">
-          <folding>
-            <element signature="e#6#91#0" expanded="true" />
-          </folding>
+        <state line="92" column="0" selection-start="2388" selection-end="2388" vertical-scroll-proportion="-10.0" vertical-offset="1219" max-vertical-offset="1785">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/magic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="164" column="23" selection-start="5350" selection-end="5350" vertical-scroll-proportion="4.8486958" vertical-offset="0" max-vertical-offset="3247">
+          <folding />
         </state>
       </provider>
     </entry>

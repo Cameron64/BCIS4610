@@ -40,27 +40,28 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' && strpos($_SERVER['CONTENT_TYPE'], 'a
 
 
 //$data['message'] = $_POST['customer'];
-$data = json_decode($_POST['customer']);
-//var_dump($data);
+$data = $_POST['customer'];
+var_dump($data);
 $basket = array();
 $basketQuantities = array();
-$email = $data->email;
-$phone = $data->num;
-$company = $data->restaurant;
-$products = $data->product;
-$quantities = $data->quantities;
-$comments = $data->comments;
+$email = $data['email'];
+$phone = $data['num'];
+$company = $data['restaurant'];
+$products = $data['product'];
+$quantities = $data['quantities'];
+$comments = $data['comments'];
 $counter = 0;
 
+var_dump($email);
 //var_dump($_POST['customer']);
 
 for($i=0; $i<= sizeof($products,0)-1; $i++){
-    array_push($basket, $data->product[$i]->id);
+    array_push($basket, $data['product'][$i]['id']);
 }
 
 for($i=0; $i<= sizeof($products,0)-1; $i++){
-    if($data->quantities[$i] != null)
-    {$basketQuantities[$i]=$data->quantities[$i];
+    if($data['quantities'][$i] != null)
+    {$basketQuantities[$i]=$data['quantities'][$i];
     }
     else{
         array_push($basketQuantities[$i], "1");
@@ -85,7 +86,7 @@ for($i=0; $i<= sizeof($products,0)-1; $i++){
 
 
 
-$mailTo = "myemail@ymail.com";
+$mailTo = "cameron64@ymail.com";
 $mailSubject = "New Order";
 
 var_dump($final);

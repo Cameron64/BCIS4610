@@ -15,6 +15,7 @@
         $http.get('js/array.json').then(function(res){scop.products = res.data;});
         $http.get('js/groups.json').then(function(res){scop.groups = res.data;});
 
+        this.count = 0;
         this.basket =[];
         this.customer ={};
         this.customer.email = "";
@@ -158,20 +159,23 @@
             if(document.getElementById('email').checkValidity() && document.getElementById('tel').checkValidity()
                 && document.getElementById('name').checkValidity()){
 
+                if(this.count == 0){
+                    this.count++;
                 lol = this;
                 $http({
                  method: 'POST',
                  url: 'php/SendOrder.php',
-                 data: $.param({'customer' : JSON.stringify(lol.customer)}),
-                 headers: {'Content-Type': 'application/x-www-form-urlencoded; charset-UTF-8'}
+                 headers: {'Content-Type': 'application/json.'},
+                 data:{customer:lol.customer}
                  }).
                  success(function(response) {
-                 console.log(response);
-                 //                        window.location = "invoice.html";
+                    console.log(response);
+                    window.location = "invoice.html";
                  })
 
             }
 
+            }
             };
 
 
