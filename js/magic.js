@@ -133,13 +133,9 @@
 
             console.log(this.customer.quantities);
             this.a = this.basket.indexOf(product);
-
-
-
             this.basket.splice(this.a,1);
             this.setCookie();
             this.removeFromCB(product);
-
             console.log(this.customer.quantities);
         };
 

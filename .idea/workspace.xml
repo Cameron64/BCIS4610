@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b05d17d8-b0d9-40c3-b537-712091fbdae2" name="Default" comment="formatted">
+    <list default="true" id="b05d17d8-b0d9-40c3-b537-712091fbdae2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout.html" afterPath="$PROJECT_DIR$/checkout.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/magic.js" afterPath="$PROJECT_DIR$/js/magic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/products.html" afterPath="$PROJECT_DIR$/products.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BCIS4610.iws" />
@@ -30,8 +31,8 @@
       <file leaf-file-name="magic.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/magic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.84827584" vertical-offset="1922" max-vertical-offset="3349">
-              <caret line="142" column="50" selection-start-line="142" selection-start-column="50" selection-end-line="142" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.26206896" vertical-offset="1905" max-vertical-offset="3281">
+              <caret line="121" column="27" selection-start-line="121" selection-start-column="27" selection-end-line="121" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -40,8 +41,8 @@
       <file leaf-file-name="SendOrder.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/SendOrder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.32" vertical-offset="1668" max-vertical-offset="2210">
-              <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+            <state vertical-scroll-proportion="-12.84" vertical-offset="1651" max-vertical-offset="2210">
+              <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -50,7 +51,7 @@
       <file leaf-file-name="invoice.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/invoice.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2584">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2584">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -60,8 +61,8 @@
       <file leaf-file-name="products.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/products.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3230">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-6.1153846" vertical-offset="2238" max-vertical-offset="3383">
+              <caret line="141" column="102" selection-start-line="141" selection-start-column="102" selection-end-line="141" selection-end-column="102" />
               <folding />
             </state>
           </provider>
@@ -70,8 +71,8 @@
       <file leaf-file-name="checkout.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/checkout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.346154" vertical-offset="2628" max-vertical-offset="3570">
-              <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+            <state vertical-scroll-proportion="-16.653847" vertical-offset="1947" max-vertical-offset="3740">
+              <caret line="140" column="73" selection-start-line="140" selection-start-column="73" selection-end-line="140" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -122,11 +123,11 @@
         <option value="$PROJECT_DIR$/js/__ajax.googleapis.com_ajax_libs_jquery_2.1.1_jquery.js" />
         <option value="$PROJECT_DIR$/css/stylecorb.css" />
         <option value="$PROJECT_DIR$/invoice.html" />
-        <option value="$PROJECT_DIR$/products.html" />
         <option value="$PROJECT_DIR$/js/array.json" />
+        <option value="$PROJECT_DIR$/js/magic.js" />
         <option value="$PROJECT_DIR$/php/SendOrder.php" />
         <option value="$PROJECT_DIR$/checkout.html" />
-        <option value="$PROJECT_DIR$/js/magic.js" />
+        <option value="$PROJECT_DIR$/products.html" />
       </list>
     </option>
   </component>
@@ -341,7 +342,11 @@
       <created>1412826472802</created>
       <updated>1412826472802</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Angularified product quantities">
+      <created>1412829000572</created>
+      <updated>1412829000572</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -405,7 +410,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Removed unused directive, added table pulling values for checkout page" />
     <MESSAGE value="Fixed blank space in cookie, added submit button that leads to invoice.html" />
     <MESSAGE value="Checkout now handles removal of items" />
     <MESSAGE value="Added a final purchase json, added function for form submission, submit button calls the method and no longer moves to another page, animation added on removal of items" />
@@ -430,7 +434,8 @@
     <MESSAGE value="Changed cookie Expiration Date" />
     <MESSAGE value="fixed conditional statement in magic" />
     <MESSAGE value="Formatted email" />
-    <option name="LAST_COMMIT_MESSAGE" value="Formatted email" />
+    <MESSAGE value="Angularified product quantities" />
+    <option name="LAST_COMMIT_MESSAGE" value="Angularified product quantities" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -767,14 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/invoice.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/array.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -791,7 +788,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/products.html">
+    <entry file="file://$PROJECT_DIR$/php/SendOrder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.84" vertical-offset="1651" max-vertical-offset="2210">
+          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invoice.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -799,26 +804,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/SendOrder.php">
+    <entry file="file://$PROJECT_DIR$/products.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.32" vertical-offset="1668" max-vertical-offset="2210">
-          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+        <state vertical-scroll-proportion="-6.1153846" vertical-offset="2238" max-vertical-offset="3383">
+          <caret line="141" column="102" selection-start-line="141" selection-start-column="102" selection-end-line="141" selection-end-column="102" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/checkout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.346154" vertical-offset="2628" max-vertical-offset="3570">
-          <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+        <state vertical-scroll-proportion="-16.653847" vertical-offset="1947" max-vertical-offset="3740">
+          <caret line="140" column="73" selection-start-line="140" selection-start-column="73" selection-end-line="140" selection-end-column="73" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/magic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84827584" vertical-offset="1922" max-vertical-offset="3349">
-          <caret line="142" column="50" selection-start-line="142" selection-start-column="50" selection-end-line="142" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.26206896" vertical-offset="1905" max-vertical-offset="3281">
+          <caret line="121" column="27" selection-start-line="121" selection-start-column="27" selection-end-line="121" selection-end-column="27" />
           <folding />
         </state>
       </provider>
