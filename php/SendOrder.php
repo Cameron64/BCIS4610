@@ -50,10 +50,8 @@ $company = $data['restaurant'];
 $products = $data['product'];
 $quantities = $data['quantities'];
 $comments = $data['comments'];
-$counter = 0;
 
-var_dump($email);
-//var_dump($_POST['customer']);
+
 
 for($i=0; $i<= sizeof($products,0)-1; $i++){
     array_push($basket, $data['product'][$i]['id']);
@@ -70,33 +68,55 @@ for($i=0; $i<= sizeof($products,0)-1; $i++){
 
 
 
-  $final = "";
-    $final .= "Email: " . $email . "\n"
-    .         "Company Name: ". $company . "\n"
-        .     "Phone Number: ". $phone . "\n".
-    "They ordered: \n";
+
+$headers = "From: " . "cameron64@ymail.com" . "\r\n";
+$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+
+
+
+  $final = "<html><body>";
+    $final .= '<table rules="all" style="border-color: black;" cellpadding="10">';
+  $final .= "<tr style='background: #eee;'><td><strong>Email:</strong> </td><td>" . strip_tags($email) . "</td></tr>"
+    .         "<tr style='background: #eee;'><td><strong>Company Name:</strong> </td><td>" . strip_tags($company) . "</td></tr>"
+        .     "<tr style='background: #eee;'><td><strong>Phone Number:</strong> </td><td>" . strip_tags($phone) . "</td></tr>";
+$final .= "<tr style='background: #eee;'><td><strong>Quantity</strong></td>";
+$final .= "<td style='background: #eee;'><strong>Product</strong></td></tr>";
+
     for($i=0; $i <= sizeof($products,0)-1; $i++){
 
-        $final .= $basket[$i] . "\t" . $basketQuantities[$i] . "\n";
+        $final .= "<tr><td style='border-right; border-color:black;background: #F7F7F7;' >" . strip_tags($basketQuantities[$i]) . "</td><td style='background: #F7F7F7;' >" . strip_tags($basket[$i]) . "</td></tr>";
     }
+//$final.= "</tr>";
     if($comments != null){
-        $final .= "They also left a comment with their order:" . "\n" . wordwrap($comments);
+        $final .= "<tr style='background: #eee;'><td><strong>Comment:</strong>" . "</td><td>" . wordwrap($comments,70, "<br />\n") . "</td></tr>";
     }
+$final .= "</table>";
+  $final .="</body></html>";
 
+
+//customer email
+$customerFinal = "";
+$customerFinal = "Dear Customer,\n\nThank you for your order. We hope to do business with you again soon.
+\nYour order:\n";
+
+for($i=0; $i <= sizeof($products,0)-1; $i++){
+
+    $customerFinal .= $basket[$i] . "\t" . $basketQuantities[$i] . "\n";
+}
 
 
 
 $mailTo = "cameron64@ymail.com";
 $mailSubject = "New Order";
 
-var_dump($final);
 
-if($counter < 1){
-    mail($mailTo,$mailSubject,$final);
-    $counter++;
-}
 
-//header('Location: invoice.html');
+mail($mailTo,$mailSubject,$final,$headers);
+
+
+
+
 
 
 
