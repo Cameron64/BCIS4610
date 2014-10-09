@@ -119,12 +119,12 @@
     <div id="CENTER_WHITE"><!-- ~~~~~ CENTRAL PANELS ~~~~~ -->
 <!--This is where product invoice-->
         <div ng-controller="productController as productCtrl">
-            <form  name="customerForm" ng-submit="productCtrl.formSubmit()" >
+            <form  name="customerForm" ng-submit="customerForm.$valid && productCtrl.formSubmit()" novalidate>
         <div class="search2">
-        <input ng-click="productCtrl.formSubmit()" class="btn btn-sm btn-primary" type="submit" ></input>
+        <input class="btn btn-sm btn-primary" type="submit" value="Submit Order"  ></input>
         </div>
-
-
+                <!--form is {{customerForm.email.$error.required}}-->
+<div></div>
             <div ng-init="productCtrl.checkCookie()"></div>
 
 
@@ -132,13 +132,14 @@
                 <br>
 
                 <div class="inputFields">
-                    <!--TODO: (angular) "angularify" form input to validate before sending to magic.js-->
-                    <!--TODO: (angular) change class of form fields based on valid input (pristine.invalid, dirty.invalid, dirty.valid)-->
+
+
                     <!--TODO: (css) place submit button within contact information div and give it a literal value like "Submit" (reason: shows as "Submit Query" on Firefox-->
                     <!--TODO: (css) add "Quantities header to table-->
                     <!--TODO: (anguular/css) add animation to product deletion-->
                     <!--TODO: (html) set floor on quantity of zero-->
                     <!--TODO: (javascript) make new cookie for quantities-->
+                    <!--TODO: (angular) refuse value of zero-->
 
 
 
@@ -146,6 +147,7 @@
                     <!--Email-->
                 E-mail:
                     <input type="email" id="email" required class="field" ng-model="productCtrl.customer.email"/> <br /><br />
+                    <div class="field" ng-show="submitted && customerForm.email.$error.email">error</div>
 
 
                     <!--Phone Number-->
@@ -181,7 +183,7 @@
                {{product.id}}
 
                     <div ng-click="productCtrl.removeProductCheckout(product.name)" class="removeItem">x</div>
-                    <input class="tableRow2" type="number" ng-init="productCtrl.customer.quantities[productCtrl.basket.indexOf(product.name)] = 0" id="product.name" ng-model="productCtrl.customer.quantities[productCtrl.basket.indexOf(product.name)]" >
+                    <input class="tableRow2" type="number" required ng-init="productCtrl.customer.quantities[productCtrl.basket.indexOf(product.name)] = 1" min="1" id="product.name" ng-model="productCtrl.customer.quantities[productCtrl.basket.indexOf(product.name)]" >
                 </div>
 
 </div>

@@ -158,8 +158,7 @@
         this.formSubmit = function(){
 
 
-            if(document.getElementById('email').checkValidity() && document.getElementById('tel').checkValidity()
-                && document.getElementById('name').checkValidity()){
+
 
                 if(this.count === 0){
                     this.count++;
@@ -175,7 +174,7 @@
                     window.location = "invoice.html";
                  })
 
-            }
+
 
             }
             };
@@ -184,5 +183,11 @@
 
 
     }]);
+
+    app.controller("ReviewController", function(){
+
+
+
+    });
 
 })();

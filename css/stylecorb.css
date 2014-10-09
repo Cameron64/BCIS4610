@@ -301,6 +301,20 @@ border-bottom: 1px solid black;
     margin-bottom:5px;
     margin-right:400px;
 }
+
+input#name.field.ng-invalid.ng-dirty,
+input#tel.field.ng-invalid.ng-dirty,
+input#email.field.ng-invalid.ng-dirty
+{
+    border-color: #FA787E;
+}
+input#name.field.ng-valid.ng-dirty,
+input#tel.field.ng-valid.ng-dirty,
+input#email.field.ng-valid.ng-dirty
+{
+    border-color: #78FA89;
+}
+
 .comments{
     position:absolute;
     right:35px;
