@@ -171,7 +171,7 @@
                {{product.id}}
 
                     <div ng-click="productCtrl.removeProductCheckout(product.name)" class="removeItem">x</div>
-                    <input class="tableRow2" type="number" id="product.name" ng-model="productCtrl.customer.quantities[productCtrl.basket.indexOf(product.name)]" >
+                    <input class="tableRow2" type="number" ng-init="productCtrl.customer.quantities[productCtrl.basket.indexOf(product.name)] = 0" id="product.name" ng-model="productCtrl.customer.quantities[productCtrl.basket.indexOf(product.name)]" >
                 </div>
 
 </div>
