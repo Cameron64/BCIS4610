@@ -80,7 +80,6 @@
         this.removeFromCB = function(product){
             this.customer.product.splice(this.basket.indexOf(product),1);
             this.customer.quantities.splice(this.basket.indexOf(product),1);
-            console.log(this.customer.product, this.customer.quantities);
 
         };
 /*class of product boxes is tied to this function, returns name of class based on whether it is in this.basket*/
@@ -131,12 +130,10 @@
 
         this.removeProductCheckout = function(product){
 
-            console.log(this.customer.quantities);
             this.a = this.basket.indexOf(product);
             this.basket.splice(this.a,1);
             this.setCookie();
             this.removeFromCB(product);
-            console.log(this.customer.quantities);
         };
 
 /*receives name of product selected
@@ -170,7 +167,6 @@
                  data:{customer:lol.customer}
                  }).
                  success(function(response) {
-                    console.log(response);
                     window.location = "invoice.html";
                  })
 
