@@ -146,13 +146,13 @@
                     <h3>Contact Information</h3>
                     <!--Email-->
                 E-mail:
-                    <input type="email" id="email" required class="field" ng-model="productCtrl.customer.email"/> <br /><br />
+                    <input type="email" id="email" required class="field" placeholder="Jon@doe.com" ng-model="productCtrl.customer.email"/> <br /><br />
                     <div class="field" ng-show="submitted && customerForm.email.$error.email">error</div>
 
 
                     <!--Phone Number-->
                 Phone Number:
-                    <input type="tel" id="tel" required class="field" ng-model="productCtrl.customer.num"/>
+                    <input type="tel" id="tel" required class="field" placeholder="(214)-555-8382" ng-model="productCtrl.customer.num"/>
 
                     <!--comment Section-->
                     <div class="comments">
@@ -165,7 +165,7 @@
                     <!--Company Name-->
                     <br/><br />
                 Company Name:
-                    <input type="text" id="name" required class="field" ng-model="productCtrl.customer.restaurant" /> <br />
+                    <input type="text" id="name" required class="field" placeholder="Chuck's at 4th and Page" ng-model="productCtrl.customer.restaurant" /> <br />
                 </div>
 
 
