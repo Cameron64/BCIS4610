@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b05d17d8-b0d9-40c3-b537-712091fbdae2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout.html" afterPath="$PROJECT_DIR$/checkout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/magic.js" afterPath="$PROJECT_DIR$/js/magic.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BCIS4610.iws" />
@@ -47,20 +46,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkout.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="checkout.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/checkout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.0384617" vertical-offset="2258" max-vertical-offset="3774">
-              <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6340111" vertical-offset="2258" max-vertical-offset="4675">
+              <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="magic.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="magic.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/magic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7724138" vertical-offset="725" max-vertical-offset="3502">
+            <state vertical-scroll-proportion="0.0" vertical-offset="725" max-vertical-offset="3502">
               <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding />
             </state>
@@ -117,8 +116,8 @@
         <option value="$PROJECT_DIR$/products.html" />
         <option value="$PROJECT_DIR$/css/stylecorb.css" />
         <option value="$PROJECT_DIR$/js/productDictionary..json" />
-        <option value="$PROJECT_DIR$/checkout.html" />
         <option value="$PROJECT_DIR$/js/magic.js" />
+        <option value="$PROJECT_DIR$/checkout.html" />
       </list>
     </option>
   </component>
@@ -233,6 +232,7 @@
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="C:/xampp/php" />
     <property name="LayoutCode.rearrangeEntriesJavaScript" value="false" />
+    <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="OPEN_URL_DIALOG">
@@ -450,7 +450,11 @@
       <created>1413231933708</created>
       <updated>1413231933708</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Reformat">
+      <created>1413232853948</created>
+      <updated>1413232853948</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -514,7 +518,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Redid Index values of products from ints to Strings &#10;&#10;Saves space and reduces amount of code reformatting necessary" />
     <MESSAGE value="Reformatted JSON for readability, began work on checkout name query" />
     <MESSAGE value="Fixed variables on front page" />
     <MESSAGE value="Used old array, fixed display of names on checkout.html" />
@@ -539,7 +542,8 @@
     <MESSAGE value="clean up" />
     <MESSAGE value="added initproducts function to populate checkout" />
     <MESSAGE value="optimized checkout display" />
-    <option name="LAST_COMMIT_MESSAGE" value="optimized checkout display" />
+    <MESSAGE value="Reformat" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reformat" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -908,18 +912,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkout.html">
+    <entry file="file://$PROJECT_DIR$/js/magic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.0384617" vertical-offset="2258" max-vertical-offset="3774">
-          <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="725" max-vertical-offset="3502">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/magic.js">
+    <entry file="file://$PROJECT_DIR$/checkout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7724138" vertical-offset="725" max-vertical-offset="3502">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6340111" vertical-offset="2258" max-vertical-offset="4675">
+          <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
           <folding />
         </state>
       </provider>
