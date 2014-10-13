@@ -49,6 +49,7 @@
                 if(this.basket[0] === ""){
                 this.basket.shift();
                }
+
             }
             else {
                 // else, dissect the cookie and add contents into basket
@@ -57,18 +58,53 @@
                 if(this.basket[0] === ""){
                     this.basket.shift();
                     }
+
             }
+            this.initProducts();
         };
-        this.isInBasket = function(n,index,id){
-/*returns true or false based on whether the name is in the basket*/
+        this.isInBasket = function(n,index,id) {
+            /*returns true or false based on whether the name is in the basket*/
 
-          if (this.basket.indexOf(n) !== -1){
-              this.initBasket(n,index);
-              return true;
-          }
-
+            if (this.basket.indexOf(n) !== -1) {
+                this.initBasket(n, index);
+                return true;
+            }
 
         };
+
+        this.initProducts = function(){
+            /*retrives JSON products array, for each object in array, determines if object name is in basket
+            * Populates customer.product array that checkout will display*/
+            $http.get("js/array.json").then(
+                //success function
+                function(results) {
+
+
+                    angular.forEach(results.data ,function(u){
+
+                        if(scop.basket.indexOf(u.name) !== -1) {
+                            console.log(u.name);
+                            scop.customer.product[scop.basket.indexOf(u.name)] = u;
+                            }
+
+
+                },
+                //error function
+                function(err) {
+                    console.log(err);
+                })
+
+                /*if(this.basket.indexOf(j) !== -1) {
+                    console.log(j);
+                    this.customer.product[this.basket.indexOf(j)] = j;
+                    console.log(this.basket,this.customer.product);
+                }*/
+            });
+        };
+
+
+
+
 
         this.initBasket = function(n,index){
 
