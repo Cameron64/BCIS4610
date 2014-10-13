@@ -34,7 +34,7 @@
                 var c = ca[i];
                 while (c.charAt(0)==' ') c = c.substring(1);
                 if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
-//                console.log(c.substring(name.length, c.length));
+//
             }
             return "nothing";
 
@@ -62,15 +62,7 @@
             }
             this.initProducts();
         };
-        this.isInBasket = function(n,index,id) {
-            /*returns true or false based on whether the name is in the basket*/
 
-            if (this.basket.indexOf(n) !== -1) {
-                this.initBasket(n, index);
-                return true;
-            }
-
-        };
 
         this.initProducts = function(){
             /*retrives JSON products array, for each object in array, determines if object name is in basket
@@ -83,7 +75,8 @@
                     angular.forEach(results.data ,function(u){
 
                         if(scop.basket.indexOf(u.name) !== -1) {
-                            console.log(u.name);
+                            /*where ever the value is in the basket, put it in that index also of the products array but as an object
+                            * this initializes correctly*/
                             scop.customer.product[scop.basket.indexOf(u.name)] = u;
                             }
 
@@ -91,31 +84,33 @@
                 },
                 //error function
                 function(err) {
-                    console.log(err);
-                })
 
-                /*if(this.basket.indexOf(j) !== -1) {
-                    console.log(j);
-                    this.customer.product[this.basket.indexOf(j)] = j;
-                    console.log(this.basket,this.customer.product);
-                }*/
+                });
+
             });
-        };
-
-
-
-
-
-        this.initBasket = function(n,index){
-
-            this.customer.product[this.basket.indexOf(n)] = this.products[index];
-            //this.customer.quantities[this.basket.indexOf(n)] = 1;
 
         };
 
-        this.removeFromCB = function(product){
-            this.customer.product.splice(this.basket.indexOf(product),1);
-            this.customer.quantities.splice(this.basket.indexOf(product),1);
+
+
+
+
+        this.selectedProducts = function(){
+
+
+
+        };
+
+
+        this.removeFromCB = function(product,index){
+console.log(this.customer.product);
+
+
+                this.customer.product.splice(index, 1);
+                this.customer.quantities.splice(index, 1);
+                console.log(this.customer.product);
+
+
 
         };
 /*class of product boxes is tied to this function, returns name of class based on whether it is in this.basket*/
@@ -157,19 +152,21 @@
 * then updates the cookie*/
         this.removeProduct = function(product){
 
-            this.a = this.basket.indexOf(product);
-            this.basket.splice(this.a,1);
+
+            this.basket.splice(this.basket.indexOf(product),1);
             document.getElementById(product).className = "box";
             this.setCookie();
 
         };
 
         this.removeProductCheckout = function(product){
+/*recieves correct product*/
 
-            this.a = this.basket.indexOf(product);
-            this.basket.splice(this.a,1);
+var a = this.basket.indexOf(product);
+            this.basket.splice(a,1);
+
             this.setCookie();
-            this.removeFromCB(product);
+            this.removeFromCB(product,a);
         };
 
 /*receives name of product selected
@@ -202,7 +199,7 @@
                  headers: {'Content-Type': 'application/json.'},
                  data:{customer:lol.customer}
                  }).
-                 success(function(response) {
+                 success(function() {
                     window.location = "invoice.html";
                  })
 
