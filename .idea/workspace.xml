@@ -47,21 +47,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkout.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="checkout.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/checkout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19408503" vertical-offset="2921" max-vertical-offset="3791">
-              <caret line="178" column="68" selection-start-line="178" selection-start-column="52" selection-end-line="178" selection-end-column="68" />
+            <state vertical-scroll-proportion="-4.0384617" vertical-offset="2258" max-vertical-offset="3774">
+              <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="magic.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="magic.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/magic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1065" max-vertical-offset="3859">
-              <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7724138" vertical-offset="725" max-vertical-offset="3502">
+              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -117,8 +117,8 @@
         <option value="$PROJECT_DIR$/products.html" />
         <option value="$PROJECT_DIR$/css/stylecorb.css" />
         <option value="$PROJECT_DIR$/js/productDictionary..json" />
-        <option value="$PROJECT_DIR$/js/magic.js" />
         <option value="$PROJECT_DIR$/checkout.html" />
+        <option value="$PROJECT_DIR$/js/magic.js" />
       </list>
     </option>
   </component>
@@ -232,6 +232,7 @@
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="C:/xampp/php" />
+    <property name="LayoutCode.rearrangeEntriesJavaScript" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="OPEN_URL_DIALOG">
@@ -445,7 +446,11 @@
       <created>1413226177478</created>
       <updated>1413226177478</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="optimized checkout display">
+      <created>1413231933708</created>
+      <updated>1413231933708</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -509,7 +514,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Fixed some issues in console, fixed left panel 404" />
     <MESSAGE value="Redid Index values of products from ints to Strings &#10;&#10;Saves space and reduces amount of code reformatting necessary" />
     <MESSAGE value="Reformatted JSON for readability, began work on checkout name query" />
     <MESSAGE value="Fixed variables on front page" />
@@ -534,7 +538,8 @@
     <MESSAGE value="Added placeholders" />
     <MESSAGE value="clean up" />
     <MESSAGE value="added initproducts function to populate checkout" />
-    <option name="LAST_COMMIT_MESSAGE" value="added initproducts function to populate checkout" />
+    <MESSAGE value="optimized checkout display" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimized checkout display" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -887,14 +892,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/products.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.615385" vertical-offset="2214" max-vertical-offset="3383">
-          <caret line="148" column="81" selection-start-line="148" selection-start-column="70" selection-end-line="148" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/array.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.5543478" vertical-offset="0" max-vertical-offset="17425">
@@ -903,18 +900,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/magic.js">
+    <entry file="file://$PROJECT_DIR$/products.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1065" max-vertical-offset="3859">
-          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+        <state vertical-scroll-proportion="-11.615385" vertical-offset="2214" max-vertical-offset="3383">
+          <caret line="148" column="81" selection-start-line="148" selection-start-column="70" selection-end-line="148" selection-end-column="86" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/checkout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19408503" vertical-offset="2921" max-vertical-offset="3791">
-          <caret line="178" column="68" selection-start-line="178" selection-start-column="52" selection-end-line="178" selection-end-column="68" />
+        <state vertical-scroll-proportion="-4.0384617" vertical-offset="2258" max-vertical-offset="3774">
+          <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/magic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7724138" vertical-offset="725" max-vertical-offset="3502">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding />
         </state>
       </provider>
