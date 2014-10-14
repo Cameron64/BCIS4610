@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b05d17d8-b0d9-40c3-b537-712091fbdae2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout.html" afterPath="$PROJECT_DIR$/checkout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/magic.js" afterPath="$PROJECT_DIR$/js/magic.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/stylecorb.css" afterPath="$PROJECT_DIR$/css/stylecorb.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -31,8 +29,8 @@
       <file leaf-file-name="products.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/products.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9230769" vertical-offset="153" max-vertical-offset="3383">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="-7.5384617" vertical-offset="1980" max-vertical-offset="3383">
+              <caret line="128" column="14" selection-start-line="128" selection-start-column="14" selection-end-line="128" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -41,27 +39,27 @@
       <file leaf-file-name="checkout.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/checkout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.0384616" vertical-offset="3237" max-vertical-offset="4675">
-              <caret line="192" column="21" selection-start-line="192" selection-start-column="21" selection-end-line="192" selection-end-column="21" />
+            <state vertical-scroll-proportion="-3.6538463" vertical-offset="3237" max-vertical-offset="4675">
+              <caret line="196" column="38" selection-start-line="196" selection-start-column="38" selection-end-line="196" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stylecorb.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="stylecorb.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/stylecorb.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5506" max-vertical-offset="6154">
-              <caret line="356" column="57" selection-start-line="356" selection-start-column="57" selection-end-line="356" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.33268481" vertical-offset="84" max-vertical-offset="6341">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="magic.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="magic.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/magic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65172416" vertical-offset="1169" max-vertical-offset="3978">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1169" max-vertical-offset="3978">
               <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
               <folding />
             </state>
@@ -104,12 +102,12 @@
         <option value="$PROJECT_DIR$/js/__ajax.googleapis.com_ajax_libs_jquery_2.1.1_jquery.js" />
         <option value="$PROJECT_DIR$/invoice.html" />
         <option value="$PROJECT_DIR$/js/array.json" />
-        <option value="$PROJECT_DIR$/products.html" />
         <option value="$PROJECT_DIR$/js/productDictionary..json" />
         <option value="$PROJECT_DIR$/php/SendOrder.php" />
-        <option value="$PROJECT_DIR$/css/stylecorb.css" />
         <option value="$PROJECT_DIR$/checkout.html" />
         <option value="$PROJECT_DIR$/js/magic.js" />
+        <option value="$PROJECT_DIR$/css/stylecorb.css" />
+        <option value="$PROJECT_DIR$/products.html" />
       </list>
     </option>
   </component>
@@ -472,7 +470,11 @@
       <created>1413260823373</created>
       <updated>1413260823373</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="fixed bug where quantities would reset on removing product from basket">
+      <created>1413266477625</created>
+      <updated>1413266477625</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -536,7 +538,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Fixed variables on front page" />
     <MESSAGE value="Used old array, fixed display of names on checkout.html" />
     <MESSAGE value="General cleanup, some css changes to center_white to stretch to bottom and removed animation on first page" />
     <MESSAGE value="Remove infinite-scroll&#10;&#10;Was not working and was not going to offer correct search capibilities" />
@@ -561,7 +562,8 @@
     <MESSAGE value="optimized checkout display" />
     <MESSAGE value="Reformat" />
     <MESSAGE value="added customer email" />
-    <option name="LAST_COMMIT_MESSAGE" value="added customer email" />
+    <MESSAGE value="fixed bug where quantities would reset on removing product from basket" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bug where quantities would reset on removing product from basket" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -907,14 +909,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/products.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769" vertical-offset="153" max-vertical-offset="3383">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/array.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -923,26 +917,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/stylecorb.css">
+    <entry file="file://$PROJECT_DIR$/js/magic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5506" max-vertical-offset="6154">
-          <caret line="356" column="57" selection-start-line="356" selection-start-column="57" selection-end-line="356" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1169" max-vertical-offset="3978">
+          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/checkout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0384616" vertical-offset="3237" max-vertical-offset="4675">
-          <caret line="192" column="21" selection-start-line="192" selection-start-column="21" selection-end-line="192" selection-end-column="21" />
+        <state vertical-scroll-proportion="-3.6538463" vertical-offset="3237" max-vertical-offset="4675">
+          <caret line="196" column="38" selection-start-line="196" selection-start-column="38" selection-end-line="196" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/magic.js">
+    <entry file="file://$PROJECT_DIR$/products.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65172416" vertical-offset="1169" max-vertical-offset="3978">
-          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+        <state vertical-scroll-proportion="-7.5384617" vertical-offset="1980" max-vertical-offset="3383">
+          <caret line="128" column="14" selection-start-line="128" selection-start-column="14" selection-end-line="128" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/stylecorb.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33268481" vertical-offset="84" max-vertical-offset="6341">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding />
         </state>
       </provider>

@@ -7,6 +7,17 @@ body {
 textarea{
     resize:none;
 }
+h4 {
+    color: #475fa3;
+    padding-bottom: .3em;
+    line-height: 1.1em;
+    font-size: .93em;
+    font-family: "Lucida Grande", "Trebuchet MS", Arial, sans-serif;
+}
+div#secondary .navbar h4 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
 .search{
     position:relative;
     width:100%;
