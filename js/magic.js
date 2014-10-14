@@ -81,6 +81,16 @@
         }}
             );
 
+
+        this.initQuantities = function(){
+
+          for(var i=0; i<=this.customer.product.length-1;i++){
+              if(this.customer.quantities[i] == null) {
+                  this.customer.quantities[i] = 1;
+              }
+          }
+        };
+
         this.initProducts = function () {
             /*retrieves JSON products array, for each object in array, determines if object name is in basket
              * Populates customer.product array that checkout will display*/

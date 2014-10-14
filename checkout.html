@@ -190,7 +190,7 @@
 
                 <div class="productName">Product Name</div>
 
-                <div ng-repeat="product in productCtrl.customer.product">
+                <div  ng-repeat="product in productCtrl.customer.product">
 
                     <div class="tableRow">
 
@@ -199,7 +199,7 @@
                         <div ng-click="productCtrl.removeProductCheckout(product.name)" class="removeItem">x</div>
                         <!--TODO: init quantity to 1 only if the quantity hasn't been changed already-->
                         <input class="tableRow2" type="number" required
-                               ng-init="productCtrl.customer.quantities[productCtrl.basket.indexOf(product.name)] = 1"
+                               ng-init="productCtrl.initQuantities()"
                                min="1" id="product.name"
                                ng-model="productCtrl.customer.quantities[productCtrl.basket.indexOf(product.name)]">
                     </div>
