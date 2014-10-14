@@ -6,7 +6,7 @@
     var app = angular.module('business', ['ngAnimate']);
 
 
-    app.controller('productController', ['$http', function ($http) {
+    app.controller('productController', ['$http','$scope', function ($http,$scope) {
 
         scop = this;
         /*
@@ -30,6 +30,7 @@
         this.customer.comments = "";
 
 
+
         //this gets the cookie contents and returns them, if blank it returns a string of "nothing"
         this.getCookie = function () {
             var name = "rollingSharpener" + "=";
@@ -38,12 +39,10 @@
                 var c = ca[i];
                 while (c.charAt(0) == ' ') c = c.substring(1);
                 if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
-//
             }
             return "nothing";
 
         };
-
         this.checkCookie = function () {
             //if page has no cookie, create a cookie, else, dissect the cookie and add contents into basket then populate the page
             var cookieValue = this.getCookie();
@@ -51,11 +50,11 @@
                 this.setCookie();
                 /*remove first empty item in array*/
                 if (this.basket[0] === "") {
-                    this.basket.shift();
-                }
+        }
+            this.basket.shift();
+        }
 
-            }
-            else {
+        else {
                 // else, dissect the cookie and add contents into basket
                 //this line turns the cookie into an array
                 this.basket = this.getCookie().split(",");
@@ -66,7 +65,21 @@
             }
             this.initProducts();
         };
+        $scope.$watch(function(){
+                var name = "rollingSharpener" + "=";
+                var ca = document.cookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') c = c.substring(1);
+                    if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
+                }
+                return "nothing";}, function(newValue, oldValue){
+                if(newValue != oldValue){
 
+            scop.checkCookie();
+                    /*need to make watcher run more frequently than on a click*/
+        }}
+            );
 
         this.initProducts = function () {
             /*retrieves JSON products array, for each object in array, determines if object name is in basket
@@ -75,17 +88,21 @@
                 //success function
                 function (results) {
 
-
+                    scop.customer.product = [];
                     angular.forEach(results.data, function (u) {
+
 
                             if (scop.basket.indexOf(u.name) !== -1) {
                                 /*where ever the value is in the basket, put it in that index also of the products array but as an object
                                  * this initializes correctly*/
                                 scop.customer.product[scop.basket.indexOf(u.name)] = u;
+
+
                             }
 
 
                         },
+
                         //error function
                         function (err) {
 
@@ -120,6 +137,7 @@
             d.setTime(d.getTime() + (3600 * 1000 * 24 * 365 * 10));
             var expires = "expires=" + d.toUTCString();
             document.cookie = "rollingSharpener" + "=" + this.basket + "; " + expires;
+
         };
 
 
