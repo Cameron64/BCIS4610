@@ -11,7 +11,7 @@
     <script src="js/array.json"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-    <title></title>
+    <title>RSS</title>
 </head>
 <body>
 
@@ -187,23 +187,26 @@
 
                 <!--begin products-->
 
-                <div class="productName">Product Name</div>
+                <table class="table table-hover">
+                <th >Product Name</th>
 
-                <div  ng-repeat="product in productCtrl.customer.product">
+                <tbody>
 
-                    <div class="tableRow">
+                    <tr ng-repeat="product in productCtrl.customer.product">
 
-                        {{product.id}}
+                       <td>{{product.id}}
 
                         <div ng-click="productCtrl.removeProductCheckout(product.name)" class="removeItem">x</div>
                         <!--TODO: init quantity to 1 only if the quantity hasn't been changed already-->
-                        <input class="tableRow2" type="number" required
+                        <input style="float:right;" type="number" required
                                ng-init="productCtrl.initQuantities()"
                                min="1" id="product.name"
                                ng-model="productCtrl.customer.quantities[productCtrl.basket.indexOf(product.name)]">
-                    </div>
+                       </td>
+                    </tr>
 
-                </div>
+                    </tbody>
+                </table>
 
                 <!--end products-->
             </form>
