@@ -129,13 +129,14 @@
         };
         /*class of product boxes is tied to this function, returns name of class based on whether it is in this.basket*/
         this.getClass = function (name) {
-            if (this.basket.indexOf(name) >= 0) {
-                return "boxSelected";
-            }
-            else {
+            if (this.basket.indexOf(name) <= -1) {
                 return "box";
             }
+            else {
+                return "boxSelected";
+            }
         };
+
 
 
         /*sets a cookie with the name of "rollingSharpener"

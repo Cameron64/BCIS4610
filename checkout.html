@@ -3,14 +3,14 @@
 <head lang="en">
     <meta charset="UTF-8">
 
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/stylecorb.css"/>
     <script src="js/angular.min.js"></script>
-
     <script src="http://code.angularjs.org/1.2.5/angular-animate.js"></script>
     <script src="js/magic.js"></script>
     <script src="js/array.json"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/stylecorb.css"/>
+
     <title></title>
 </head>
 <body>
@@ -132,10 +132,10 @@
 
     <div id="CENTER_WHITE"><!-- ~~~~~ CENTRAL PANELS ~~~~~ -->
         <!--This is where product invoice-->
-        <div ng-controller="productController as productCtrl">
+        <div  ng-controller="productController as productCtrl">
             <form name="customerForm" ng-submit="customerForm.$valid && productCtrl.formSubmit()" novalidate>
                 <div class="search2">
-                    <input class="btn btn-sm btn-primary" type="submit" value="Submit Order"></input>
+                    <input class="btn btn-sm btn-primary" type="submit" value="Submit Order">
                 </div>
                 <!--form is {{customerForm.email.$error.required}}-->
                 <div></div>
