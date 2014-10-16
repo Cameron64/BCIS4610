@@ -299,7 +299,7 @@ border-bottom: 1px solid black;
 .inputFields{
 
     position:relative;
-
+    bottom:26px;
     background:lightblue;
     padding-left:20px;
     padding-right:20px;
@@ -329,7 +329,7 @@ input#email.field.ng-valid.ng-dirty
 .comments{
     position:absolute;
     right:35px;
-    top: 80px;
+    top: 45px;
 
 }
 .commentsBox{
