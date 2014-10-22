@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="business">
+<html ng-app="business" ng-controller="productController as productCtrl">
 <head lang="en">
     <meta charset="UTF-8">
 
@@ -22,6 +22,7 @@
 <body>
 
 <div class="container">
+    <div id="otherThings">
 
     <div id="LOGOBLOCK">
         <a href="http://www.rollingsharpeningstone.com/index.php"><img id="logo" src="imagescorb/topleft.jpg" width="226" height="134" alt="Rolling Sharpening Stone" /></a>
@@ -46,79 +47,34 @@
     <div id="RIGHT_SQUARE">
         <img src="imagescorb/rightsquare1.jpg"
              alt="Rolling Sharpening Stone franchisee" width="226" height="179" border="0" />	</div><!-- end RIGHT_SQUARE -->
+    </div>
 
-    <div id="LEFT_NAV_PANEL"><!-- ~~~~~ LEFT PANELS ~~~~~ -->
-
-
-
-        <div id="secondary"><div class="navbar">
-
-            <h4>Services and General Information</h4>
-
-            <ul class="general_info">
-
-                <li>
-                    <a href="http://www.rollingsharpeningstone.com/find_services.php">Find Services in your Area</a>
-                </li>
-
-                <li>
-                    <a href="http://www.rollingsharpeningstone.com/index.php">Home Page</a> </li>
-
-                <li>
-                    <a href="http://www.rollingsharpeningstone.com/aboutUs.php">About Us</a>
-                </li>
-
-                <li>
-                    <a href="http://www.rollingsharpeningstone.com/press.php">In The News</a>
-                </li>
-
-                <li>
-                    <a href="http://www.rollingsharpeningstone.com/our_clients.php">Our Clients</a>
-                </li>
-
-                <li>
-                    <a href="http://www.rollingsharpeningstone.com/our_products.php">Our Products</a>
-                </li>
-
-                <!--<li>
-                <a href="http://www.rollingsharpeningstone.com/links.php">Other Links</a>
-                </li>-->
-
-                <li>
-                    <a href="http://www.rollingsharpeningstone.com/contactus.php">Contact Us</a>
-                </li>
-
-                <!--<li>
-                    <a href="javascript:mailpage()">Tell A Friend</a>
-                </li>-->
-
-                <li>
-                    <a href="http://www.rollingsharpeningstone.com/EmailSignUp.php">Join our Email List</a>
-                </li>
-
-            </ul>
+    <div id="LEFT_NAV_PANEL2"><!-- ~~~~~ LEFT PANELS ~~~~~ -->
+<h3>Filters</h3>
 
 
-            <h4>Franchise Opportunities</h4>
-
-            <ul class="franchisee_info">
-
-                <li>
-                    <a href="http://www.rollingsharpeningstone.com/the_franchise.php">The Franchise</a>
-                </li>
-
-                <li>
-                    <a href="http://www.rollingsharpeningstone.com/steps_to_own.php">Steps To Owning a Franchise</a>
-                </li>
-
-                <li>
-                    <a href="http://www.rollingsharpeningstone.com/FORM_prospect.php">Request for Information Form</a>
-                </li>
+        <!--TODO: (css) print products in a prettier way (has been difficult, tried and was unsuccessful)-->
+        <!--TODO: (css) restore text to right gray pannel (both pages-->
+        <!--TODO: (css) correct app only having black boarder on one side (right)-->
+        <!--TODO: (angular) see if a light animation is possible with large lists-->
+        <!--TODO: (angular) put class logic into html and remove checking in js-->
+        <!--TODO: (angular) see if it's possible to ng-model product names directly into cookie-->
 
 
 
-            </ul>
-        </div><!-- end navbar --></div><!-- end secondary -->
+
+
+
+        <select  ng-model="category" ng-options="o as o for o in productCtrl.groups">
+            <option value="">Categories</option>
+        </select>
+
+        <div class="search">
+            Search Items or Categories
+            <input type="text" ng-model="searchText" placeholder="Search" >
+
+
+        </div>
 
     </div><!-- end LEFT-NAV-PANEL -->
 
@@ -128,27 +84,7 @@
             <!-- is a title really necessary? -->
             <h1>Rolling Sharpening Stone</h1><div class="text"><p></p>
             <p>&#160;</p>
-            <div class="search">
-                <button class="btn btn-sm btn-primary" type="button" onclick="location.href='checkout.html'" >Review Order</button>
-                <input type="text" ng-model="searchText" placeholder="Search" class="searchBox">
 
-
-            </div>
-            <!--TODO: (css) print products in a prettier way (has been difficult, tried and was unsuccessful)-->
-            <!--TODO: (css) restore text to right gray pannel (both pages-->
-            <!--TODO: (css) correct app only having black boarder on one side (right)-->
-            <!--TODO: (angular) see if a light animation is possible with large lists-->
-            <!--TODO: (angular) put class logic into html and remove checking in js-->
-            <!--TODO: (angular) see if it's possible to ng-model product names directly into cookie-->
-
-
-
-
-            <div ng-controller="productController as productCtrl" >
-
-                <select id="category" ng-model="category" ng-options="o as o for o in productCtrl.groups">
-                    <option value="">Categories</option>
-                </select>
 
                 <div ng-init="productCtrl.checkCookie()"></div>
 
@@ -168,7 +104,7 @@
 
 
 
-            </div>
+
 
         </div><!-- end text -->
 
@@ -178,13 +114,37 @@
 
     <div id="LEFT_BOTTOM_PANEL"></div><!-- end LEFT_BOTTOM_PANEL -->
 
-    <div class="franchisees_list">
 
-        <h4>OWNER/OPERATORS &#38; TERRITORIES:</h4><ul><li class="area"><span class="state">Arizona</span><p>Greater Metro Phoenix<br /><a href="http://www.rollingsharpeningstone.com/owner.php?fran_id=7">Tim Crites</a></p></li><li class="area"><span class="state">Colorado</span><p>Aspen/Vail/Grand Junction<br /><a href="http://www.rollingsharpeningstone.com/owner.php?fran_id=6">Mike Kosec</a></p><p>Boulder/Longmont<br /><a href="http://www.rollingsharpeningstone.com/owner.php?fran_id=16">Chris Roulin</a></p><p>Colorado Springs<br /><a href="http://www.rollingsharpeningstone.com/owner.php?fran_id=8">Dan Bruntz</a></p><p>Ft Collins/Loveland/Greeley<br /><a href="http://www.rollingsharpeningstone.com/owner.php?fran_id=10">Jeff Brundage</a></p><p>North Metro Denver<br /><a href="http://www.rollingsharpeningstone.com/owner.php?fran_id=9">Kent Palmerton</a></p><p>South Metro Denver<br /><a href="http://www.rollingsharpeningstone.com/owner.php?fran_id=5">John Dickinson</a></p></li><li class="area"><span class="state">Nebraska</span><p>Greater Metro Omaha<br /><a href="http://www.rollingsharpeningstone.com/owner.php?fran_id=11">Mick Ellis</a></p></li><li class="area"><span class="state">Texas</span><p>Greater Metro Dallas<br /><a href="http://www.rollingsharpeningstone.com/owner.php?fran_id=12">Ron DeRenzo</a></p></li></ul>
 
-    </div><!-- end franchisees_list -->
+    <div id="RIGHT_BOTTOM_GRAY_PANEL2">
 
-    <div id="RIGHT_BOTTOM_GRAY_PANEL"></div><!-- end RIGHT_BOTTOM_GRAY_PANEL -->
+        <h3>Basket</h3>
+        <table class="table table-hover" style="position:relative;bottom:26px;">
+            <th >Product Name</th>
+
+            <tbody>
+
+            <tr class="repeat-animation" ng-repeat="product in productCtrl.customer.product">
+
+                <td>{{product.id}}
+
+                    <div ng-click="productCtrl.removeProductCheckout(product.name)" class="removeItem">x</div>
+                    <!--TODO: init quantity to 1 only if the quantity hasn't been changed already-->
+                    <input style="float:right;" type="number" required
+                           ng-init="productCtrl.initQuantities()"
+                           min="1" id="product.name"
+                           ng-model="productCtrl.customer.quantities[productCtrl.basket.indexOf(product.name)]">
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        <button class="btn btn-sm btn-primary" type="button" onclick="location.href='checkout.html'" >Review Order</button>
+
+
+
+    </div><!-- end RIGHT_BOTTOM_GRAY_PANEL -->
 
 </div><!-- end RIGHT-GRAY-PANEL -->
 

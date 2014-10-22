@@ -20,9 +20,8 @@ div#secondary .navbar h4 {
 }
 .search{
     position:relative;
-    width:100%;
-    height: 20%;
-    background-color:lightgrey;
+
+    margin:5px;
 }
 .search2{
     position:relative;
@@ -160,7 +159,6 @@ div#secondary .navbar h4 {
     border-top:  1px solid black;
     border-right:   1px solid black;
 }
-
 #LEFT_NAV_PANEL {
     position: absolute;
     left: 0;
@@ -174,7 +172,18 @@ div#secondary .navbar h4 {
     background-repeat: no-repeat;
     background-position: top left;
 }
-
+#LEFT_NAV_PANEL2 {
+    position: absolute;
+    padding:10px;
+    left: 0;
+    top: 313px;
+    width: 226px;
+    height: 449px;
+    border-left:   1px solid black;
+    border-top:  1px solid black;
+    border-bottom: 1px solid black;
+    background-color:white;
+}
 #RIGHT_BOTTOM_GRAY_PANEL {
     position: absolute;
     left: 720px;
@@ -186,6 +195,16 @@ div#secondary .navbar h4 {
     border-right: 1px solid black;
     background-color: #dde2ee;
     margin-bottom: 10px;
+}
+#RIGHT_BOTTOM_GRAY_PANEL2 {
+    position: fixed;
+    right: 476px;
+    top: 314px;
+    width: 226px;
+    min-height: 250px;
+    border: 1px solid black;
+    background-color:white;
+
 }
 
 #CENTER_WHITE {
