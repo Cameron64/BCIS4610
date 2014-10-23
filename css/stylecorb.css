@@ -198,12 +198,13 @@ div#secondary .navbar h4 {
 }
 #RIGHT_BOTTOM_GRAY_PANEL2 {
     position: fixed;
-    right: 476px;
     top: 314px;
     width: 226px;
     min-height: 250px;
     border: 1px solid black;
     background-color:white;
+    overflow-x: auto;
+    max-height:70%;
 
 }
 
@@ -362,13 +363,39 @@ input#email.field.ng-valid.ng-dirty
 .thankYou{
     text-align: center;
 }
-
 .repeat-animation.ng-enter-stagger {
     /* 200ms will be applied between each sucessive enter operation */
+    -webkit-transition-delay:0.05s;
+    transition-delay:0.05s;
+
+    /* this is here to avoid accidental CSS inheritance */
+    -webkit-transition-duration:0;
+    transition-duration:0;
+}
+
+.repeat-animation.ng-enter {
+    -webkit-transition:0.2s linear all;
+    transition:0.2s linear all;
+
+    opacity:0;
+    line-height:0;
+}
+
+.repeat-animation.ng-enter.ng-enter-active {
+    opacity:1;
+
+}
+/*
+.repeat-animation.ng-enter-stagger {
+    */
+/* 200ms will be applied between each sucessive enter operation *//*
+
     -webkit-transition-delay:0.2s;
     transition-delay:0.2s;
 
-    /* this is here to avoid accidental CSS inheritance */
+    */
+/* this is here to avoid accidental CSS inheritance *//*
+
     -webkit-transition-duration:0;
     transition-duration:0;
 }
@@ -384,4 +411,4 @@ input#email.field.ng-valid.ng-dirty
 .repeat-animation.ng-enter.ng-enter-active {
     opacity:1;
 
-}
+}*/

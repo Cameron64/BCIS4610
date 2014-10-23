@@ -11,6 +11,7 @@
     <script src="js/magic.js"></script>
     <script src="js/array.json"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/jQuery.js"></script>
 
 
 
@@ -116,11 +117,13 @@
 
 
 
-    <div id="RIGHT_BOTTOM_GRAY_PANEL2">
+    <div id="RIGHT_BOTTOM_GRAY_PANEL2" style="overflow-x: auto; max-height:70%;">
 
+        <button class="btn btn-sm btn-primary" style="position:relative;top:10px;left:120px;" type="button" onclick="location.href='checkout.html'" >Review Order</button>
         <h3>Basket</h3>
-        <table class="table table-hover" style="position:relative;bottom:26px;">
-            <th >Product Name</th>
+
+        <table class="table table-hover" style="position:relative;bottom:26px;margin-top:30px;padding: 10px;">
+            <th>Product Name</th>
 
             <tbody>
 
@@ -130,7 +133,7 @@
 
                     <div ng-click="productCtrl.removeProductCheckout(product.name)" class="removeItem">x</div>
                     <!--TODO: init quantity to 1 only if the quantity hasn't been changed already-->
-                    <input style="float:right;" type="number" required
+                    <input style="float:right;max-width:50px;" type="number" required
                            ng-init="productCtrl.initQuantities()"
                            min="1" id="product.name"
                            ng-model="productCtrl.customer.quantities[productCtrl.basket.indexOf(product.name)]">
@@ -140,7 +143,7 @@
             </tbody>
         </table>
 
-        <button class="btn btn-sm btn-primary" type="button" onclick="location.href='checkout.html'" >Review Order</button>
+        <button class="btn btn-sm btn-primary" style="position:relative;bottom:0;" type="button" onclick="location.href='checkout.html'" >Review Order</button>
 
 
 
