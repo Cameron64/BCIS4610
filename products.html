@@ -117,13 +117,19 @@
 
 
 
-    <div id="RIGHT_BOTTOM_GRAY_PANEL2" style="overflow-x: auto; max-height:70%;">
+    <div id="RIGHT_BOTTOM_GRAY_PANEL2">
 
-        <button class="btn btn-sm btn-primary" style="position:relative;top:10px;left:120px;" type="button" onclick="location.href='checkout.html'" >Review Order</button>
+        <div class="basketHeader">
+        <div class="basketFixed">
+
+        <button class="btn btn-sm btn-primary"  style="position:relative;top:10px;left:120px;" type="button" onclick="location.href='checkout.html'" >Review Order</button>
         <h3>Basket</h3>
+        </div>
+        </div>
 
-        <table class="table table-hover" style="position:relative;bottom:26px;margin-top:30px;padding: 10px;">
-            <th>Product Name</th>
+        <div class="basketShell">
+        <table class="table table-hover">
+
 
             <tbody>
 
@@ -133,7 +139,7 @@
 
                     <div ng-click="productCtrl.removeProductCheckout(product.name)" class="removeItem">x</div>
                     <!--TODO: init quantity to 1 only if the quantity hasn't been changed already-->
-                    <input style="float:right;max-width:50px;" type="number" required
+                    <input class="basketQuantity" type="number" required
                            ng-init="productCtrl.initQuantities()"
                            min="1" id="product.name"
                            ng-model="productCtrl.customer.quantities[productCtrl.basket.indexOf(product.name)]">
@@ -143,9 +149,7 @@
             </tbody>
         </table>
 
-        <button class="btn btn-sm btn-primary" style="position:relative;bottom:0;" type="button" onclick="location.href='checkout.html'" >Review Order</button>
-
-
+        </div>
 
     </div><!-- end RIGHT_BOTTOM_GRAY_PANEL -->
 
