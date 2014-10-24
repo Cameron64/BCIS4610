@@ -1,0 +1,8 @@
+[
+    {"name":"A","Vendor":"Admiral Craft Equipment","Group":"Featured","Sub Group":"Induction","Part Number":"Counter Top:Induction:IND-B120","Mfg P/N":"IND-B120","U/M":"Each","id":"Induction Cooktop"},
+    {"name":"B","Vendor":"Admiral Craft Equipment","Group":"Featured","Sub Group":"Oven","Part Number":"Counter Top:Oven:COQ-1750W","Mfg P/N":"COQ-1750W","U/M":"Each","id":"Oven, Convection, 1/4 Size"},
+    {"name":"C","Vendor":"Admiral Craft Equipment","Group":"Featured","Sub Group":"Warmer","Part Number":"Counter Top:Warmer:FW-1200WR","Mfg P/N":"FW-1200WR","U/M":"Each","id":"Warmer, Round"},
+    {"name":"D","Vendor":"Admiral Craft Equipment","Group":"Featured","Sub Group":"Mandolin","Part Number":"Food Prep:Mandolin:Man-38","Mfg P/N":"Man-38","U/M":"Each","id":"Mandolin"},
+    {"name":"E","Vendor":"Allied Metal Spinning Corp","Group":"Featured","Sub Group":"Cake Pan","Part Number":"Baking:Cake Pan:CPHS5x3","Mfg P/N":"CPHS5x3","U/M":"Each","id":"5 inch stacking pan"},
+    {"name":"F","Vendor":"Allied Metal Spinning Corp","Group":"Featured","Sub Group":"Cake Ring","Part Number":"Baking:Cake Ring:CRS9134","Mfg P/N":"CRS9134","U/M":"Each","id":"Cake Ring 9 inch"}
+]

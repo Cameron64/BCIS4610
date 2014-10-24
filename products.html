@@ -10,6 +10,7 @@
     <script src="http://code.angularjs.org/1.2.5/angular-animate.js"></script>
     <script src="js/magic.js"></script>
     <script src="js/array.json"></script>
+    <script src="js/featured.json"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/jQuery.js"></script>
 
@@ -66,8 +67,10 @@
 
 
 
-        <select  ng-model="category" ng-options="o as o for o in productCtrl.groups">
-            <option value="">Categories</option>
+        <select  ng-model="productCtrl.category" ng-options="o as o for o in productCtrl.groups"  ng-selected="productCtrl.featured">
+
+
+
         </select>
 
         <div class="search">
@@ -82,14 +85,25 @@
     <div id="CENTER_WHITE"><!-- ~~~~~ CENTRAL PANELS ~~~~~ -->
 
         <div id="primary">
-            <!-- is a title really necessary? -->
             <h1>Rolling Sharpening Stone</h1><div class="text"><p></p>
             <p>&#160;</p>
 
 
                 <div ng-init="productCtrl.checkCookie()"></div>
+            <div ng-show="productCtrl.category == 'Featured'" ng-repeat="featuredProduct in productCtrl.featured">
+                <div ng-click="productCtrl.select(featuredProduct.name)" ng-class="productCtrl.getClass(featuredProduct.name)" id="{{featuredProduct.name}}"  >
 
-                   <div ng-repeat="product in productCtrl.products | filter:searchText | filter:category | orderBy:'productCtrl.product.id'"  >
+
+
+                    <div  class="boxInner" ng-class="productCtrl.getClass(product.id)" >
+                        <strong>{{featuredProduct.id}}</strong>
+
+                    </div>
+                </div>
+
+            </div>
+
+                   <div ng-show="productCtrl.category !== 'Featured'" ng-repeat="product in productCtrl.products | filter:searchText | filter:productCtrl.category | orderBy:'productCtrl.product.id'"  >
 
                        <div ng-click="productCtrl.select(product.name)" ng-class="productCtrl.getClass(product.name)" id="{{product.name}}"  >
 

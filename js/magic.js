@@ -18,6 +18,9 @@
         $http.get('js/groups.json').then(function (res) {
             scop.groups = res.data;
         });
+        $http.get('js/featured.json').then(function (res) {
+            scop.featured = res.data;
+        });
 
         this.count = 0;
         this.basket = [];
@@ -28,6 +31,7 @@
         this.customer.product = [];
         this.customer.quantities = [];
         this.customer.comments = "";
+        this.category = "Featured";
 
 
 
