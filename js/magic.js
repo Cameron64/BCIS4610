@@ -6,7 +6,7 @@
     var app = angular.module('business', ['ngAnimate']);
 
 
-    app.controller('productController', ['$http','$scope', function ($http,$scope) {
+    app.controller('productController', ['$http','$scope','$document', function ($http,$scope,$document) {
 
         scop = this;
         /*
@@ -49,6 +49,17 @@
             return "nothing";
 
         };
+        function getCookie(Cname) {
+            var name = Cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1);
+                if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
+            }
+            return "nothing";
+        }
+
         this.checkCookie = function () {
             //if page has no cookie, create a cookie, else, dissect the cookie and add contents into basket then populate the page
             var cookieValue = this.getCookie();
@@ -56,8 +67,12 @@
                 this.setCookie();
                 /*remove first empty item in array*/
                 if (this.basket[0] === "") {
+                    this.basket.shift();
         }
-            this.basket.shift();
+                /*if(this.customer.quantities[0] ===""){
+                    this.customer.quantities.shift();
+                }*/
+
         }
 
         else {
@@ -67,6 +82,12 @@
                 if (this.basket[0] === "") {
                     this.basket.shift();
                 }
+                /*console.log(getCookie("rollingSharpenerQuantities"));
+                console.log( $document.prop( "cookie" ) );
+                console.log( $document[ 0 ].cookie );*/
+                /*if(this.customer.quantities[0] ===""){
+                    this.customer.quantities.shift();
+                }*/
 
             }
             this.initProducts();
@@ -86,21 +107,6 @@
                     /*need to make watcher run more frequently than on a click*/
         }}
             );
-        $scope.$watch(function(){
-                var name = "rollingSharpener" + "=";
-                var ca = document.cookie.split(';');
-                for (var i = 0; i < ca.length; i++) {
-                    var c = ca[i];
-                    while (c.charAt(0) == ' ') c = c.substring(1);
-                    if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
-                }
-                return "nothing";}, function(newValue, oldValue){
-                if(newValue != oldValue){
-
-                    scop.checkCookie();
-                    /*need to make watcher run more frequently than on a click*/
-                }}
-        );
 
 
         this.initQuantities = function(){
@@ -169,6 +175,7 @@
             d.setTime(d.getTime() + (3600 * 1000 * 24 * 365 * 10));
             var expires = "expires=" + d.toUTCString();
             document.cookie = "rollingSharpener" + "=" + this.basket + "; " + expires;
+            document.cookie = "rollingSharpenerQuantities" + "=" + this.customer.quantities + ";" + expires;
 
         };
 
@@ -178,6 +185,7 @@
          * then updates the cookie*/
         this.addProduct = function (product) {
             this.basket.push(product);
+            this.customer.quantities.push(1);
             /*should not need this line to change class on selection, but breaks when removed, same for next method*/
             document.getElementById(product).className = "boxSelected";
             this.setCookie();
@@ -188,7 +196,7 @@
          * then updates the cookie*/
         this.removeProduct = function (product) {
 
-
+            this.customer.quantities.splice(this.basket.indexOf(product), 1);
             this.basket.splice(this.basket.indexOf(product), 1);
             document.getElementById(product).className = "box";
             this.setCookie();
@@ -239,32 +247,6 @@
 
             }
         };
-
-        this.search = function(){
-
-            var search = "";
-            $http.get("js/groups.json").then(
-                //success function
-                function (results) {
-
-                    angular.forEach(results.data, function (u) {
-                        console.log(u);
-                        console.log(input);
-
-                        console.log(scop.category == u);
-
-
-                    },
-                        //error function
-                        function (err) {
-                        });
-                    return "Featured";
-
-                });
-
-
-        };
-
 
     }]);
 

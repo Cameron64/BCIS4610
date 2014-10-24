@@ -55,20 +55,9 @@
 <h3>Filters</h3>
         <button type="button" class="btn btn-default" ng-click="productCtrl.category = 'All'">Clear Filters</button>
 
-        <!--TODO: (css) print products in a prettier way (has been difficult, tried and was unsuccessful)-->
-        <!--TODO: (css) restore text to right gray pannel (both pages-->
-        <!--TODO: (css) correct app only having black boarder on one side (right)-->
-        <!--TODO: (angular) see if a light animation is possible with large lists-->
-        <!--TODO: (angular) put class logic into html and remove checking in js-->
-        <!--TODO: (angular) see if it's possible to ng-model product names directly into cookie-->
-
-
-
-
 
 
         <select  ng-model="productCtrl.category" ng-options="o as o for o in productCtrl.groups">
-
 
 
         </select>
@@ -93,6 +82,8 @@
 
 
                 <div ng-init="productCtrl.checkCookie()"></div>
+            <!--featured products section-->
+
             <div ng-show="productCtrl.category == 'Featured'" ng-repeat="featuredProduct in productCtrl.featured">
                 <div ng-click="productCtrl.select(featuredProduct.name)" ng-class="productCtrl.getClass(featuredProduct.name)" id="{{featuredProduct.name}}"  >
 
@@ -105,7 +96,8 @@
                 </div>
 
             </div>
-
+            <!--end featured products section-->
+<!--Main products section-->
                    <div ng-show="productCtrl.category !== 'Featured'" ng-repeat="product in productCtrl.products | filter:productCtrl.category | filter:productCtrl.searchText | filter:productCtrl.searchTextAll"  >
 
                        <div ng-click="productCtrl.select(product.name)" ng-class="productCtrl.getClass(product.name)" id="{{product.name}}"  >
@@ -120,7 +112,7 @@
                     </div>
                        </div>
 
-
+<!--end main products section-->
 
 
 
@@ -133,6 +125,7 @@
     <div id="LEFT_BOTTOM_PANEL"></div><!-- end LEFT_BOTTOM_PANEL -->
 
 
+    <!--Begin Basket-->
 
     <div id="RIGHT_BOTTOM_GRAY_PANEL2">
 
@@ -155,8 +148,7 @@
                 <td>{{product.id}}
 
                     <div ng-click="productCtrl.removeProductCheckout(product.name)" class="removeItem">x</div>
-                    <!--TODO: init quantity to 1 only if the quantity hasn't been changed already-->
-                    <input class="basketQuantity" type="number" required
+                    <input ng-change="productCtrl.setCookie()" class="basketQuantity" type="number" required
                            ng-init="productCtrl.initQuantities()"
                            min="1" id="product.name"
                            ng-model="productCtrl.customer.quantities[productCtrl.basket.indexOf(product.name)]">
@@ -168,7 +160,7 @@
 
         </div>
 
-    </div><!-- end RIGHT_BOTTOM_GRAY_PANEL -->
+    </div><!--Emd Basket--> <!-- end RIGHT_BOTTOM_GRAY_PANEL -->
 
 </div><!-- end RIGHT-GRAY-PANEL -->
 
