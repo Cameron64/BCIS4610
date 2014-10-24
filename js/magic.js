@@ -32,6 +32,8 @@
         this.customer.quantities = [];
         this.customer.comments = "";
         this.category = "Featured";
+        this.searchText = "";
+        this.searchTextAll = "";
 
 
 
@@ -236,6 +238,31 @@
 
 
             }
+        };
+
+        this.search = function(){
+
+            var search = "";
+            $http.get("js/groups.json").then(
+                //success function
+                function (results) {
+
+                    angular.forEach(results.data, function (u) {
+                        console.log(u);
+                        console.log(input);
+
+                        console.log(scop.category == u);
+
+
+                    },
+                        //error function
+                        function (err) {
+                        });
+                    return "Featured";
+
+                });
+
+
         };
 
 

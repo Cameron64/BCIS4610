@@ -53,7 +53,7 @@
 
     <div id="LEFT_NAV_PANEL2"><!-- ~~~~~ LEFT PANELS ~~~~~ -->
 <h3>Filters</h3>
-
+        <button type="button" class="btn btn-default" ng-click="productCtrl.category = 'All'">Clear Filters</button>
 
         <!--TODO: (css) print products in a prettier way (has been difficult, tried and was unsuccessful)-->
         <!--TODO: (css) restore text to right gray pannel (both pages-->
@@ -67,7 +67,7 @@
 
 
 
-        <select  ng-model="productCtrl.category" ng-options="o as o for o in productCtrl.groups"  ng-selected="productCtrl.featured">
+        <select  ng-model="productCtrl.category" ng-options="o as o for o in productCtrl.groups">
 
 
 
@@ -75,10 +75,13 @@
 
         <div class="search">
             Search Items or Categories
-            <input type="text" ng-model="searchText" placeholder="Search" >
+            <input type="text" ng-model="productCtrl.searchText" placeholder="Search" >
 
 
         </div>
+        <br>
+        or Search All Products
+        <input type="text" ng-model="productCtrl.searchTextAll" ng-click="productCtrl.category = 'All'; productCtrl.searchText = ''" placeholder="Search" >
 
     </div><!-- end LEFT-NAV-PANEL -->
 
@@ -103,7 +106,7 @@
 
             </div>
 
-                   <div ng-show="productCtrl.category !== 'Featured'" ng-repeat="product in productCtrl.products | filter:searchText | filter:productCtrl.category | orderBy:'productCtrl.product.id'"  >
+                   <div ng-show="productCtrl.category !== 'Featured'" ng-repeat="product in productCtrl.products | filter:productCtrl.category | filter:productCtrl.searchText | filter:productCtrl.searchTextAll"  >
 
                        <div ng-click="productCtrl.select(product.name)" ng-class="productCtrl.getClass(product.name)" id="{{product.name}}"  >
 
