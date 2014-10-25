@@ -49,7 +49,7 @@
             return "nothing";
 
         };
-        function getCookie(Cname) {
+        this.getCookies = function(Cname) {
             var name = Cname + "=";
             var ca = document.cookie.split(';');
             for (var i = 0; i < ca.length; i++) {
@@ -58,7 +58,7 @@
                 if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
             }
             return "nothing";
-        }
+        };
 
         this.checkCookie = function () {
             //if page has no cookie, create a cookie, else, dissect the cookie and add contents into basket then populate the page
@@ -227,6 +227,16 @@
 
         };
 
+
+        this.initBasketQuantity = function(){
+            console.log(this.getCookies("rollingSharpenerQuantities"));
+             var l = this.getCookies("rollingSharpenerQuantities").split(',');
+            for(var i=0; i<l.length; i++) {
+                l[i] = parseInt(l[i]); }
+            this.customer.quantities = l;
+            console.log(this.customer.quantities);
+            console.log(this.customer.quantities[1]);
+        };
 
         this.formSubmit = function () {
 

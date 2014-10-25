@@ -138,7 +138,7 @@
         </div>
 
         <div class="basketShell">
-        <table class="table table-hover">
+        <table class="table table-hover" ng-init="productCtrl.initBasketQuantity()">
 
 
             <tbody>
@@ -149,7 +149,7 @@
 
                     <div ng-click="productCtrl.removeProductCheckout(product.name)" class="removeItem">x</div>
                     <input ng-change="productCtrl.setCookie()" class="basketQuantity" type="number" required
-                           ng-init="productCtrl.initQuantities()"
+
                            min="1" id="product.name"
                            ng-model="productCtrl.customer.quantities[productCtrl.basket.indexOf(product.name)]">
                 </td>
