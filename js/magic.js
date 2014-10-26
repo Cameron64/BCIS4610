@@ -69,9 +69,9 @@
                 if (this.basket[0] === "") {
                     this.basket.shift();
         }
-                /*if(this.customer.quantities[0] ===""){
+                if(this.customer.quantities[0] =="" || isNaN(this.customer.quantities[0])){
                     this.customer.quantities.shift();
-                }*/
+                }
 
         }
 
@@ -79,15 +79,15 @@
                 // else, dissect the cookie and add contents into basket
                 //this line turns the cookie into an array
                 this.basket = this.getCookie().split(",");
-                if (this.basket[0] === "") {
+                if (this.basket[0] == "") {
                     this.basket.shift();
                 }
                 /*console.log(getCookie("rollingSharpenerQuantities"));
                 console.log( $document.prop( "cookie" ) );
                 console.log( $document[ 0 ].cookie );*/
-                /*if(this.customer.quantities[0] ===""){
+                if(this.customer.quantities[0] ==="" || isNaN(this.customer.quantities[0])){
                     this.customer.quantities.shift();
-                }*/
+                }
 
             }
             this.initProducts();
@@ -149,11 +149,7 @@
 
         };
 
-        this.removeFromCB = function (product, index) {
 
-            this.customer.product.splice(index, 1);
-            this.customer.quantities.splice(index, 1);
-        };
         /*class of product boxes is tied to this function, returns name of class based on whether it is in this.basket*/
         this.getClass = function (name) {
             if (this.basket.indexOf(name) <= -1) {
@@ -204,13 +200,14 @@
         };
 
         this.removeProductCheckout = function (product) {
-            /*recieves correct product*/
 
             var a = this.basket.indexOf(product);
+            this.customer.quantities.splice(a,1);
             this.basket.splice(a, 1);
 
+            this.customer.product.splice(a, 1);
+
             this.setCookie();
-            this.removeFromCB(product, a);
         };
 
         /*receives name of product selected
@@ -229,13 +226,12 @@
 
 
         this.initBasketQuantity = function(){
-            console.log(this.getCookies("rollingSharpenerQuantities"));
+
              var l = this.getCookies("rollingSharpenerQuantities").split(',');
             for(var i=0; i<l.length; i++) {
                 l[i] = parseInt(l[i]); }
             this.customer.quantities = l;
-            console.log(this.customer.quantities);
-            console.log(this.customer.quantities[1]);
+
         };
 
         this.formSubmit = function () {

@@ -190,7 +190,7 @@
                 <table class="table table-hover" style="position:relative;bottom:26px;">
                 <th >Product Name</th>
 
-                <tbody>
+                <tbody ng-init="productCtrl.initBasketQuantity()">
 
                     <tr class="repeat-animation" ng-repeat="product in productCtrl.customer.product">
 
@@ -199,6 +199,7 @@
                         <div ng-click="productCtrl.removeProductCheckout(product.name)" class="removeItem">x</div>
                         <!--TODO: init quantity to 1 only if the quantity hasn't been changed already-->
                         <input style="float:right;" type="number" required
+                               ng-change="productCtrl.setCookie()"
                                ng-init="productCtrl.initQuantities()"
                                min="1" id="product.name"
                                ng-model="productCtrl.customer.quantities[productCtrl.basket.indexOf(product.name)]">
