@@ -222,6 +222,11 @@
         };
 
 
+        this.isInBasket = function(id){
+            return this.basket.indexOf(id) < 0;
+        };
+
+
         this.initBasketQuantity = function(){
 
              var l = this.getCookies("rollingSharpenerQuantities").split(',');

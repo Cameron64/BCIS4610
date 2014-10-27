@@ -95,7 +95,8 @@
                         <img ng-click="open(featuredProduct)" ng-src="{{featuredProduct.pic}}" style="position:relative;width:60%;left:20%;" />
 
                     </div>
-                    <button type="button" id="{{featuredProduct.id}}" ng-click="productCtrl.selectProduct(featuredProduct.name)" style="position:relative;top:130px;left:130px;;">Add To Cart</button>
+                    <button ng-show="productCtrl.isInBasket(featuredProduct.name)" type="button"  ng-click="productCtrl.selectProduct(featuredProduct.name)" style="position:relative;top:130px;left:130px;;">Add to Basket</button>
+                    <button ng-hide="productCtrl.isInBasket(featuredProduct.name)" type="button" ng-click="productCtrl.selectProduct(featuredProduct.name)" style="position:relative;top:130px;left:100px;;">Remove from Basket</button>
                 </div>
 
 
