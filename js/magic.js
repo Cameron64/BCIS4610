@@ -34,6 +34,7 @@
         this.category = "Featured";
         this.searchText = "";
         this.searchTextAll = "";
+        this.canEdit = false;
 
 
 
@@ -255,6 +256,12 @@
 
             }
         };
+        this.toggleEdit = function(){
+            if(this.canEdit){
+                this.canEdit = false;
+            }
+            else{this.canEdit = true;}
+        }
 
     }]);
 
@@ -302,8 +309,6 @@ app.controller('ModalDemoCtrl', function ($scope, $modal, $log) {
     });
 
 
-    app.factory('Share', function() {
-        return{message:""}
-    })
+
 
 })();
