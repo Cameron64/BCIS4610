@@ -211,7 +211,7 @@
         /*receives name of product selected
          * if it is not found in this.basket, it sends the name to addProduct
          * if it finds the name in this.basket, it sends the name to removeProduct*/
-        this.select = function (id) {
+        this.selectProduct = function (id) {
             if (this.basket.indexOf(id) < 0) {
                 this.addProduct(id);
             }

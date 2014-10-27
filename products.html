@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="business" ng-controller="productController as productCtrl">
+<html ng-app="business" ng-controller="productController as productCtrl" id="productCtrl">
 <head lang="en">
     <meta charset="UTF-8">
 
@@ -86,22 +86,24 @@
             <!--featured products section-->
 
             <div  ng-controller="ModalDemoCtrl" ng-show="productCtrl.category == 'Featured'" ng-repeat="featuredProduct in productCtrl.featured">
-                <div ng-click="open(featuredProduct)" class="box" id="{{featuredProduct.name}}"  >
+                <div class="box" id="{{featuredProduct.name}}"  >
 
-                    <strong>{{featuredProduct.id}}</strong>
+                    <strong ng-click="open(featuredProduct)" style="position:absolute;left:50px;">{{featuredProduct.id}}</strong>
 
                     <div  class="boxInner"  >
 
-                        <img ng-src="{{featuredProduct.pic}}" style="width:60%;" />
+                        <img ng-click="open(featuredProduct)" ng-src="{{featuredProduct.pic}}" style="position:relative;width:60%;left:20%;" />
 
                     </div>
+                    <button type="button" id="{{featuredProduct.id}}" ng-click="productCtrl.selectProduct(featuredProduct.name)" style="position:relative;top:130px;left:130px;;">Add To Cart</button>
                 </div>
+
 
             </div>
             <div ng-controller="ModalDemoCtrl">
                 <script type="text/ng-template" id="myModalContent.html">
                     <div class="modal-header">
-                        <h3 class="modal-title">{{items.id}}</h3>
+                        <h3 class="modal-title" id="itemId">{{items.id}}</h3>
                     </div>
                     <div class="modal-body">
 
@@ -111,12 +113,12 @@
 
 
                     <div class="modal-footer">
-                        <button class="btn btn-primary" ng-click="ok();productCtrl.select(item.name)">Add to Cart</button>
-                        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+                        <button id="addToCart" class="btn btn-primary" ng-click="ok()">Ok</button>
+
                     </div>
                 </script>
 
-                <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+                <div ng-show="selected">Selection from a modal: {{ selected.item }}</div>
             </div>
             <!--end featured products section-->
 <!--Main products section-->
