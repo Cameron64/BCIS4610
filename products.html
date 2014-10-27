@@ -85,8 +85,8 @@
                 <div ng-init="productCtrl.checkCookie()"></div>
             <!--featured products section-->
 
-            <div ng-show="productCtrl.category == 'Featured'" ng-repeat="featuredProduct in productCtrl.featured">
-                <div ng-click="productCtrl.select(featuredProduct.name)" ng-class="productCtrl.getClass(featuredProduct.name)" id="{{featuredProduct.name}}"  >
+            <div  ng-controller="ModalDemoCtrl" ng-show="productCtrl.category == 'Featured'" ng-repeat="featuredProduct in productCtrl.featured">
+                <div ng-click="open()" ng-class="productCtrl.getClass(featuredProduct.name)" id="{{featuredProduct.name}}"  >
 
 
 
@@ -116,9 +116,6 @@
                     </div>
                 </script>
 
-                <button class="btn btn-default" ng-click="open()">Open me!</button>
-                <button class="btn btn-default" ng-click="open('lg')">Large modal</button>
-                <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
                 <div ng-show="selected">Selection from a modal: {{ selected }}</div>
             </div>
             <!--end featured products section-->
