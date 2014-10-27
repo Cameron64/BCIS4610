@@ -86,12 +86,13 @@
             <!--featured products section-->
 
             <div  ng-controller="ModalDemoCtrl" ng-show="productCtrl.category == 'Featured'" ng-repeat="featuredProduct in productCtrl.featured">
-                <div ng-click="open()" ng-class="productCtrl.getClass(featuredProduct.name)" id="{{featuredProduct.name}}"  >
+                <div ng-click="open(featuredProduct)" class="box" id="{{featuredProduct.name}}"  >
 
+                    <strong>{{featuredProduct.id}}</strong>
 
+                    <div  class="boxInner"  >
 
-                    <div  class="boxInner" ng-class="productCtrl.getClass(product.id)" >
-                        <strong>{{featuredProduct.id}}</strong>
+                        <img ng-src="{{featuredProduct.pic}}" style="width:60%;" />
 
                     </div>
                 </div>
@@ -100,18 +101,17 @@
             <div ng-controller="ModalDemoCtrl">
                 <script type="text/ng-template" id="myModalContent.html">
                     <div class="modal-header">
-                        <h3 class="modal-title">I'm a modal!</h3>
+                        <h3 class="modal-title">{{items.id}}</h3>
                     </div>
                     <div class="modal-body">
-                        <ul>
-                            <li ng-repeat="item in items">
-                                <a ng-click="selected.item = item">{{ item }}</a>
-                            </li>
-                        </ul>
-                        Selected: <b>{{ selected.item }}</b>
-                    </div>
+
+                        Group: {{items.Group}} <br>
+                        SubGroup: {{items.SubGroup}}
+                        <img ng-src="{{items.pic}}" style="position:relative;left:20%;"/>
+
+
                     <div class="modal-footer">
-                        <button class="btn btn-primary" ng-click="ok()">OK</button>
+                        <button class="btn btn-primary" ng-click="ok();productCtrl.select(item.name)">Add to Cart</button>
                         <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
                     </div>
                 </script>

@@ -183,7 +183,6 @@
             this.basket.push(product);
             this.customer.quantities.push(1);
             /*should not need this line to change class on selection, but breaks when removed, same for next method*/
-            document.getElementById(product).className = "boxSelected";
             this.setCookie();
         };
 
@@ -194,7 +193,6 @@
 
             this.customer.quantities.splice(this.basket.indexOf(product), 1);
             this.basket.splice(this.basket.indexOf(product), 1);
-            document.getElementById(product).className = "box";
             this.setCookie();
 
         };
@@ -214,7 +212,6 @@
          * if it is not found in this.basket, it sends the name to addProduct
          * if it finds the name in this.basket, it sends the name to removeProduct*/
         this.select = function (id) {
-
             if (this.basket.indexOf(id) < 0) {
                 this.addProduct(id);
             }
@@ -260,14 +257,14 @@ app.controller('ModalDemoCtrl', function ($scope, $modal, $log) {
 
     $scope.items = ['item1', 'item2', 'item3'];
 
-    $scope.open = function () {
+    $scope.open = function (product) {
 
         var modalInstance = $modal.open({
             templateUrl: 'myModalContent.html',
             controller: 'ModalInstanceCtrl',
             resolve: {
                 items: function () {
-                    return $scope.items;
+                    return product;
                 }
             }
         });
@@ -287,14 +284,14 @@ app.controller('ModalDemoCtrl', function ($scope, $modal, $log) {
 
         $scope.items = items;
         $scope.selected = {
-            item: $scope.items[0]
+            item: $scope.items
         };
-
         $scope.ok = function () {
             $modalInstance.close($scope.selected.item);
         };
 
         $scope.cancel = function () {
+
             $modalInstance.dismiss('cancel');
         };
     });

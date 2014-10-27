@@ -56,7 +56,9 @@ div#secondary .navbar h4 {
 .box {
     float: left;
     position: relative;
-    width: 20%;
+    width: 50%;
+    margin-top:20px;
+    margin-bottom:20px;
     padding-bottom: 25%;
 }
 .box:hover  .boxInner{
