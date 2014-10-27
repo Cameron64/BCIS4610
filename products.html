@@ -86,7 +86,7 @@
             <!--featured products section-->
 
             <div  ng-controller="ModalDemoCtrl" ng-show="productCtrl.category == 'Featured'" ng-repeat="featuredProduct in productCtrl.featured">
-                <div class="box" id="{{featuredProduct.name}}"  >
+                <div class="box"  >
 
                     <strong ng-click="open(featuredProduct)" style="position:absolute;left:50px;">{{featuredProduct.id}}</strong>
 
@@ -119,23 +119,27 @@
                     </div>
                 </script>
 
-                <div ng-show="selected">Selection from a modal: {{ selected.item }}</div>
+
             </div>
             <!--end featured products section-->
 <!--Main products section-->
-                   <div ng-show="productCtrl.category !== 'Featured'" ng-repeat="product in productCtrl.products | filter:productCtrl.category | filter:productCtrl.searchText | filter:productCtrl.searchTextAll"  >
+                   <div  ng-controller="ModalDemoCtrl" ng-show="productCtrl.category !== 'Featured'" ng-repeat="product in productCtrl.products | filter:productCtrl.category | filter:productCtrl.searchText | filter:productCtrl.searchTextAll"  >
 
-                       <div ng-click="productCtrl.select(product.name)" ng-class="productCtrl.getClass(product.name)" id="{{product.name}}"  >
+                       <div class="box"  >
 
+                           <strong ng-click="open(product)" style="position:absolute;left:50px;">{{product.id}}</strong>
 
+                           <div  class="boxInner"  >
 
-                            <div  class="boxInner" ng-class="productCtrl.getClass(product.id)" >
-                                <strong>{{product.id}}</strong>
+                               <img ng-click="open(product)" ng-src="{{product.pic}}" style="position:relative;width:60%;left:20%;" />
 
-                        </div>
+                           </div>
+                           <button ng-show="productCtrl.isInBasket(product.name)" type="button"  ng-click="productCtrl.selectProduct(product.name)" style="position:relative;top:130px;left:130px;;">Add to Basket</button>
+                           <button ng-hide="productCtrl.isInBasket(product.name)" type="button" ng-click="productCtrl.selectProduct(product.name)" style="position:relative;top:130px;left:100px;;">Remove from Basket</button>
+                       </div>
 
                     </div>
-                       </div>
+
 
 <!--end main products section-->
 
