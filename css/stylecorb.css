@@ -433,3 +433,6 @@ input#email.field.ng-valid.ng-dirty
     float:right;
     max-width:50px;
 }
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
+}
