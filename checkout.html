@@ -138,7 +138,8 @@
 
 
             <!--begin products-->
-
+            <div ng-hide="productCtrl.orderConfirmed">
+<button ng-click="productCtrl.toggleOrderConfirmed()" style="float:right;top:100px;">Confirm Order</button>
                 <table class="table table-hover" style="position:relative;bottom:26px;top:30px;">
                 <th >Product Name<button ng-hide="productCtrl.canEdit" ng-click="productCtrl.toggleEdit()" style="float:right;">Edit</button>
                     <button ng-show="productCtrl.canEdit" ng-click="productCtrl.toggleEdit()" style="float:right;">Save Changes</button></th>
@@ -151,7 +152,6 @@
                            <div ng-hide="productCtrl.canEdit" style="float:right" ng-bind="productCtrl.customer.quantities[productCtrl.basket.indexOf(product.name)]"></div>
 <div ng-show="productCtrl.canEdit">
                         <div ng-click="productCtrl.removeProductCheckout(product.name)" class="removeItem">x</div>
-                        <!--TODO: init quantity to 1 only if the quantity hasn't been changed already-->
                         <input style="float:right;" type="number" required
                                ng-change="productCtrl.setCookie()"
                                ng-init="productCtrl.initQuantities()"
@@ -165,10 +165,66 @@
                 </table>
 
                 <!--end products-->
-            </form>
-
         </div>
+            <form ng-show="productCtrl.orderConfirmed" name="customerForm" ng-submit="customerForm.$valid && productCtrl.formSubmit()" novalidate>
 
+                <!--form is {{customerForm.email.$error.required}}-->
+                <div></div>
+                <div ng-init="productCtrl.checkCookie()"></div>
+
+
+                <br>
+                <br>
+
+                <div class="inputFields">
+
+
+                    <!--TODO: (javascript) make new cookie for quantities-->
+                    <!--TODO: (light angular) add reason for error if form is not valid e.g. "Email is not valid" in red text on top right-->
+
+
+                    <h3>Contact Information</h3>
+
+                    <!--Email-->
+                    E-mail:
+                    <input type="email" id="email" required class="field" placeholder="Jon@doe.com"
+                           ng-model="productCtrl.customer.email"/> <br/><br/>
+
+                    <div class="field" ng-show="submitted && customerForm.email.$error.email">error</div>
+
+
+                    <!--Phone Number-->
+                    Phone Number:
+                    <input type="tel" id="tel" required class="field" placeholder="(214)-555-8382"
+                           ng-model="productCtrl.customer.num"/>
+
+                    <!--comment Section-->
+                    <div class="comments">
+                        <div class="commentHeader" style="bottom:105px;">
+                            Comments
+                        </div>
+                        <div class="search2">
+                            <input class="btn btn-sm btn-primary" style="position:relative; bottom:25px;left:100px; " type="submit" value="Submit Order">
+                        </div>
+                        <textarea ng-model="productCtrl.customer.comments" id="comments" class="commentsBox"
+                                  name="comments">
+                        </textarea>
+                    </div>
+                    <!--Company Name-->
+                    <br/><br/>
+                    Company Name:
+                    <input type="text" id="name" required class="field" placeholder="Chuck's at 4th and Page"
+                           ng-model="productCtrl.customer.restaurant"/> <br/>
+                </div>
+
+
+                <!--begin products-->
+
+
+
+                <!--end products-->
+            </form>
+        </div>
 
         <!--end product invoice-->
     </div>

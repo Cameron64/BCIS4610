@@ -35,6 +35,7 @@
         this.searchText = "";
         this.searchTextAll = "";
         this.canEdit = false;
+        this.orderConfirmed = false;
 
 
 
@@ -261,6 +262,13 @@
                 this.canEdit = false;
             }
             else{this.canEdit = true;}
+        }
+
+        this.toggleOrderConfirmed = function(){
+            if(this.orderConfirmed){
+                this.orderConfirmed = false;
+            }
+            else{this.orderConfirmed = true;}
         }
 
     }]);
