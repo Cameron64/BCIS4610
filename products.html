@@ -54,25 +54,27 @@
 
     <div id="LEFT_NAV_PANEL2"><!-- ~~~~~ LEFT PANELS ~~~~~ -->
 <h3>Filters</h3>
-        <button type="button" class="btn btn-default" ng-click="productCtrl.category = 'All'; productCtrl.searchTextAll=''">Clear Filters</button>
+        <button style="position:relative; top:10px;" type="button" class="btn btn-info" ng-click="productCtrl.category = 'All'; productCtrl.searchTextAll=''">Clear Filters</button>
 
 
 
-        <select  ng-model="productCtrl.category" ng-options="o as o for o in productCtrl.groups">
+        <select style="position:relative; top:40px;" ng-model="productCtrl.category" ng-options="o as o for o in productCtrl.groups">
 
 
         </select>
 
-        <div class="search">
-            Search Items or Categories
-            <input type="text" ng-model="productCtrl.searchText" placeholder="Search" >
+        <div class="search"  style="position:relative; top:60px;">
+            <h5>Search for Items within Categories</h5>
+            <input class="form-control" style="height:20px;width:150px;" type="text" ng-model="productCtrl.searchText"  >
 
 
         </div>
-        <br>
-        or Search All Products
-        <input type="text" ng-model="productCtrl.searchTextAll" ng-click="productCtrl.category = 'All'; productCtrl.searchText = ''" placeholder="Search" >
 
+        <br>
+        <div style="position:relative;top:70px;left:10px;"><h6>or</h6></div>
+        <div style="position:relative; top:90px;left:5px;"><h5>Search All Products</h5>
+        <input class="form-control" style="position:relative; top:5px;left:0px;height:20px;width:150px;" type="text" ng-model="productCtrl.searchTextAll" ng-click="productCtrl.category = 'All'; productCtrl.searchText = ''" >
+        </div>
     </div><!-- end LEFT-NAV-PANEL -->
 
     <div id="CENTER_WHITE"><!-- ~~~~~ CENTRAL PANELS ~~~~~ -->
