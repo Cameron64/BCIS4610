@@ -87,7 +87,7 @@
                 <div ng-init="productCtrl.checkCookie()"></div>
             <!--featured products section-->
 
-            <div  ng-controller="ModalDemoCtrl" ng-show="productCtrl.category == 'Featured'" ng-repeat="featuredProduct in productCtrl.featured">
+            <div  ng-controller="ModalDemoCtrl" class="repeat-animation" ng-show="productCtrl.category == 'Featured'" ng-repeat="featuredProduct in productCtrl.featured">
                 <div class="box"  >
 
                     <strong ng-click="open(featuredProduct)" style="position:absolute;left:50px;">{{featuredProduct.id}}</strong>
