@@ -271,6 +271,8 @@
             else{this.orderConfirmed = true;}
         }
 
+
+
     }]);
 
 app.controller('ModalDemoCtrl', function ($scope, $modal, $log) {

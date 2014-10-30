@@ -52,7 +52,7 @@
              alt="Rolling Sharpening Stone franchisee" width="226" height="179" border="0" />	</div><!-- end RIGHT_SQUARE -->
     </div>
 
-    <div id="LEFT_NAV_PANEL2"><!-- ~~~~~ LEFT PANELS ~~~~~ -->
+    <div id="LEFT_NAV_PANEL2" ><!-- ~~~~~ LEFT PANELS ~~~~~ -->
 <h3>Filters</h3>
         <button style="position:relative; top:10px;" type="button" class="btn btn-info" ng-click="productCtrl.category = 'All'; productCtrl.searchTextAll=''">Clear Filters</button>
 
@@ -80,7 +80,7 @@
     <div id="CENTER_WHITE"><!-- ~~~~~ CENTRAL PANELS ~~~~~ -->
 
         <div id="primary">
-            <h1>Rolling Sharpening Stone</h1><div class="text"><p></p>
+            <h1 style="position:relative;left:10px;">Rolling Sharpening Stone</h1><div class="text"><h4 style="position:relative;left:11px;">Category: {{productCtrl.category}}</h4>
             <p>&#160;</p>
 
 
@@ -125,7 +125,7 @@
             </div>
             <!--end featured products section-->
 <!--Main products section-->
-                   <div  ng-controller="ModalDemoCtrl" ng-show="productCtrl.category !== 'Featured'" ng-repeat="product in productCtrl.products | filter:productCtrl.category | filter:productCtrl.searchText | filter:productCtrl.searchTextAll"  >
+                   <div  ng-controller="ModalDemoCtrl" class="repeat-animation" ng-show="productCtrl.category !== 'Featured'" ng-repeat="product in productCtrl.products | filter:productCtrl.category | filter:productCtrl.searchText | filter:productCtrl.searchTextAll"  >
 
                        <div class="box"  >
 
@@ -164,7 +164,8 @@
         <div class="basketFixed">
 
         <button class="btn btn-sm btn-primary"  style="position:relative;top:10px;left:120px;" type="button" onclick="location.href='checkout.html'" >Review Order</button>
-        <h3>Basket</h3>
+        <h3>Basket ({{productCtrl.basket.length}})</h3>
+
         </div>
         </div>
 
