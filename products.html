@@ -110,10 +110,14 @@
                     </div>
                     <div class="modal-body">
 
-                        Group: {{items.Group}} <br>
-                        SubGroup: {{items.SubGroup}}
-                        <img ng-src="{{items.pic}}" style="position:relative;left:20%;"/>
+                        <h5>Group: {{items.Group}}</h5>
+                        <h5>Sub-Group: {{items.SubGroup}}</h5>
+                        <h5>Sold as: {{items.UM}}</h5>
 
+                        <img ng-src="{{items.pic}}" style="position:relative;left:50%;"/>
+                        <h5>Mfg Part Number: "{{items.MfgPN}}"</h5>
+                        <h5>Part Number: "{{items.PartNumber}}"</h5>
+                        </div>
 
                     <div class="modal-footer">
                         <button id="addToCart" class="btn btn-primary" ng-click="ok()">Ok</button>
