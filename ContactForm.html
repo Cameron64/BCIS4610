@@ -134,6 +134,7 @@
 <div id="CENTER_WHITE"><!-- ~~~~~ CENTRAL PANELS ~~~~~ -->
     <!--This is where product invoice-->
     <div  ng-controller="productController as productCtrl">
+        <div ng-init="productCtrl.initBasketQuantity()"></div>
         <form name="customerForm" ng-submit="customerForm.$valid && productCtrl.formSubmit()" novalidate>
 
             <!--form is {{customerForm.email.$error.required}}-->
