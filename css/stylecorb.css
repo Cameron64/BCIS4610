@@ -27,9 +27,7 @@ textarea{
     width: 200px;
 }
 .btn-sm{
-    position:absolute;
     right:0;
-    bottom:0;
 }
 .container{
     position: relative;
