@@ -139,11 +139,11 @@
 
             <!--begin products-->
 
-<button onclick="location.href='ContactForm.html'" ng-hide="productCtrl.canEdit" style="position:absolute;top:5px;right:10px;">Confirm Order</button>
+<button onclick="location.href='ContactForm.html'" class="btn btn-primary"  ng-hide="productCtrl.canEdit" style="position:absolute;top:375px;right:10px;">Confirm Order</button>
 
 
                 <table class="table table-hover" style="position:relative;bottom:26px;top:30px;">
-                <th >Product Name<button ng-hide="productCtrl.canEdit" ng-click="productCtrl.toggleEdit()" style="float:right;">Edit</button>
+                <th ><h4>Product Name</h4><button ng-hide="productCtrl.canEdit" class="btn btn-default btn-sm" ng-click="productCtrl.toggleEdit()" style="float:right;right:10px;">Edit</button>
                     <button ng-show="productCtrl.canEdit" ng-click="productCtrl.toggleEdit()" style="float:right;">Save Changes</button></th>
 
                 <tbody ng-init="productCtrl.initBasketQuantity()">
