@@ -1,14 +1,44 @@
 <html>
 <head>
     <script src="js/angular.min.js"></script>
+    <script src="js/array.json"></script>
+    <script src="js/groups.json"></script>
     <script src="js/authentication.js"></script>
-</head>
-<body ng-app="authenticate" ng-controller="AuthenticationController as Controller">
 
-<div style="position:absolute; top:50%; left:45%;">
+</head>
+<body ng-app="authenticate" ng-controller="AuthenticationController" ng-init="productsLength()">
+
+<div style="position:absolute; top:50%; left:45%" ng-hide="selectionChosen">
+    <h4>Select an Option</h4> <br>
+    <input type="button" ng-click="add=true;selectionChosen=true" value="Add a Product">
+    <input type="button" ng-click="remove=true;selectionChosen=true" value="Remove a Product">
+</div>
+
+
+<div style="position:relative;" ng-show="add">
+    <h3>Add a Product</h3>
+
+ID: {{named(lengthOfProducts)}}<br>
+    Vendor: <input type="text" ng-model="Vendor"> <br>
+    Group: <select ng-model="Group" ng-options="o as o for o in groups"></select><br>
+
+
+
+</div>
+<div style="position:relative;" ng-show="remove">Remove a Product</div>
+
+
+<div style="position:absolute;bottom:0; ">
+    <div ng-hide="authenticated || !selectionChosen">
 <div ng-bind="error" style="color:red;"></div>
     Password <input type="password" ng-model="form.pass"> <button type="submit" ng-click="formSubmit()">Submit</button>
 </div>
+    <div ng-show="authenticated">You win</div>
+</div>
+
+
+
+
 </body>
 
 

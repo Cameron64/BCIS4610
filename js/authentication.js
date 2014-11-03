@@ -6,12 +6,14 @@
 
     app.controller('AuthenticationController', ['$http','$scope', function ($http,$scope) {
 
-        scop = this;
         /*
          declares productController.products to be the json array
          */
         $http.get('js/array.json').then(function (res) {
-            scop.products = res.data;
+            $scope.products = res.data;
+        });
+        $http.get('js/groups.json').then(function (res) {
+            $scope.groups = res.data;
         });
 
         $scope.form = {};
@@ -19,6 +21,56 @@
         $scope.count = 0;
         $scope.error = "";
         $scope.attemptsLeft = 5;
+        $scope.authenticated = false;
+        $scope.selectionChosen = false;
+        $scope.add = false;
+        $scope.remove = false;
+        $scope.name = "";
+        $scope.Vendor = "";
+        $scope.Group = "";
+        $scope.SubGroup = "";
+        $scope.PartNumber = "";
+        $scope.MfgPN = "";
+        $scope.UM = "";
+        $scope.id = "";
+        $scope.pic = "pics/generic_product.jpg";
+        $scope.lengthOfProducts = 0;
+
+        $scope.named = function(n){
+
+            var s = "";
+            while(n >= 0) {
+                s = String.fromCharCode(n % 26 + 97) + s;
+                n = Math.floor(n / 26) - 1;
+            }
+            s = s.toUpperCase();
+            $scope.name = s;
+            return s;
+        };
+
+        $scope.productsLength = function () {
+            /*retrieves JSON products array, for each object in array, determines if object name is in basket
+             * Populates customer.product array that checkout will display*/
+            $http.get("js/array.json").then(
+                //success function
+                function (results) {
+
+                    $scope.product = [];
+
+                    angular.forEach(results.data, function (u) {
+
+                                $scope.lengthOfProducts++;
+
+                        },
+
+                        //error function
+                        function (err) {
+
+                        });
+
+                });
+
+        };
 
         $scope.formSubmit = function () {
 
@@ -38,8 +90,8 @@
 
                         }
                         else{
-
-console.log("success");
+                            $scope.authenticated = true;
+                            $scope.apply();
                         }
                     })
 
