@@ -6,8 +6,8 @@
 <body ng-app="authenticate" ng-controller="AuthenticationController as Controller">
 
 <div style="position:absolute; top:50%; left:45%;">
-<div ng-bind="Controller.error" style="color:red;"></div>
-    Password <input type="password" ng-model="Controller.form.pass"> <button type="submit" ng-click="Controller.formSubmit()">Submit</button>
+<div ng-bind="error" style="color:red;"></div>
+    Password <input type="password" ng-model="form.pass"> <button type="submit" ng-click="formSubmit()">Submit</button>
 </div>
 </body>
 

@@ -14,40 +14,39 @@
             scop.products = res.data;
         });
 
-this.form = {};
-this.form.pass = "";
-this.count = 0;
-        this.error = "";
-        this.attemptsLeft = 5;
+        $scope.form = {};
+        $scope.form.pass = "";
+        $scope.count = 0;
+        $scope.error = "";
+        $scope.attemptsLeft = 5;
 
-        this.formSubmit = function () {
+        $scope.formSubmit = function () {
 
 
-            if (this.count < 4) {
-                this.count++;
-                lol = this;
+            if ($scope.count < 4) {
+                $scope.count++;
                 $http({
                     method: 'POST',
                     url: 'php/Authenticate.php',
                     headers: {'Content-Type': 'application/json.'},
-                    data: {form: lol.form}
+                    data: {form: $scope.form}
                 }).
                     success(function (data) {
                         if(!data.success){
-                            lol.attemptsLeft--;
-                            lol.error = "Incorrect Password " + lol.attemptsLeft + " attempts remaining.";
+                            $scope.attemptsLeft--;
+                            $scope.error = "Incorrect Password " + $scope.attemptsLeft + " attempts remaining.";
 
                         }
                         else{
 
-
+console.log("success");
                         }
                     })
 
 
             }
             else{
-            this.error = "Too many failed attempts";
+                $scope.error = "Too many failed attempts";
             }
         };
 
