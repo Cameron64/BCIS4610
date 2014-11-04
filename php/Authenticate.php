@@ -19,7 +19,7 @@ $form = $_POST['form'];
 $pass = $form['pass'];
 
 
-if($pass == "AustinD31!"){
+if($pass == "p"){
     $data['success'] = true;
 }
 else{

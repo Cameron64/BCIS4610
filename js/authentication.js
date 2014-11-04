@@ -91,7 +91,8 @@
                         }
                         else{
                             $scope.authenticated = true;
-                            $scope.apply();
+                            $scope.newProduct();
+
                         }
                     })
 
@@ -103,6 +104,43 @@
         };
 
 
+        $scope.newProduct = function(){
+            $http.get('js/array.json').then(function (res) {
+                $scope.products = res;
+            });
+            console.log($scope.products);
+            $scope.newProduct = {};
+            $scope.newProduct = {"name":$scope.id,"Vendor":$scope.Vendor,"Group":$scope.Group,"SubGroup":$scope.SubGroup,"PartNumber":$scope.PartNumber,"MfgPN":$scope.MfgPN,"UM":$scope.UM,"id":$scope.name,"pic": $scope.pic};
+
+            $scope.products.push($scope.newProduct);
+            console.log($scope.products);
+            /*$http.post('js/array.json',$scope.products).success(function(){
+                console.log($scope.newProduct);
+                console.log($scope.products);
+            })*/
+
+        }
     }]);
+
+    app.directive('passwordAuth',function(){
+
+        return{
+            transclude: true,
+            restrict: 'E',
+            templateUrl: 'directives/password.html'
+
+        }
+
+    });
+    app.directive('addProductTable',function(){
+
+        return{
+            transclude: true,
+            restrict: 'E',
+            templateUrl: 'directives/addProductTable.html'
+
+        }
+
+    });
 
 })();
